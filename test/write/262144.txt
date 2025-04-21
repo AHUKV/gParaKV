@@ -1,0 +1,86 @@
+LevelDB:    version 1.23
+Date:       Sun Jul 28 21:34:30 2024
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 100
+... finished 200
+... finished 300
+... finished 400
+... finished 500
+... finished 600
+... finished 700
+... finished 800
+... finished 900
+... finished 1000
+... finished 1500
+... finished 2000
+... finished 2500
+... finished 3000
+... finished 3500
+... finished 4000
+... finished 4500
+... finished 5000
+... finished 6000
+... finished 7000
+... finished 8000
+... finished 9000
+... finished 10000
+... finished 15000
+... finished 20000
+... finished 25000
+... finished 30000
+... finished 35000
+... finished 40000
+... finished 45000
+... finished 50000
+... finished 60000
+... finished 70000
+... finished 80000
+... finished 90000
+... finished 100000
+... finished 150000
+... finished 200000
+... finished 250000
+... finished 300000
+... finished 350000
+Keys:       16 bytes each
+Values:     262144 bytes each (131072 bytes after compression)
+Entries:    390625
+RawSize:    97662.2 MB (estimated)
+FileSize:   48834.1 MB (estimated)
+------------------------------------------------
+fillrandom   :     244.560 micros/op 4088 ops/sec 95.531 seconds 390625 operations; 1022.3 MB/s
+Microseconds per op:
+Count: 390625  Average: 244.5592  StdDev: 161.80
+Min: 192.0000  Median: 237.7475  Max: 87876.0000
+------------------------------------------------------
+[     180,     200 )       1   0.000%   0.000% 
+[     200,     250 )  258708  66.229%  66.230% #############
+[     250,     300 )  105938  27.120%  93.350% #####
+[     300,     350 )   21097   5.401%  98.750% #
+[     350,     400 )    2486   0.636%  99.387% 
+[     400,     450 )    1332   0.341%  99.728% 
+[     450,     500 )     487   0.125%  99.853% 
+[     500,     600 )     315   0.081%  99.933% 
+[     600,     700 )     101   0.026%  99.959% 
+[     700,     800 )      28   0.007%  99.966% 
+[     800,     900 )      22   0.006%  99.972% 
+[     900,    1000 )      25   0.006%  99.978% 
+[    1000,    1200 )      38   0.010%  99.988% 
+[    1200,    1400 )      13   0.003%  99.991% 
+[    1400,    1600 )       6   0.002%  99.993% 
+[    1600,    1800 )       4   0.001%  99.994% 
+[    1800,    2000 )       5   0.001%  99.995% 
+[    2000,    2500 )       4   0.001%  99.996% 
+[    2500,    3000 )       3   0.001%  99.997% 
+[    4000,    4500 )       5   0.001%  99.998% 
+[    6000,    7000 )       1   0.000%  99.998% 
+[    7000,    8000 )       2   0.001%  99.999% 
+[   14000,   16000 )       1   0.000%  99.999% 
+[   25000,   30000 )       2   0.001% 100.000% 
+[   80000,   90000 )       1   0.000% 100.000% 
+
+flush到磁盘: 0MB,		 写入磁盘: 0MB,		 写放大: -nan 
+原始写入磁盘: 97662MB,		 新写入磁盘量： 97669MB,		 空间放大： 1.00 
+compaction time: 0
+cache hit count: 0

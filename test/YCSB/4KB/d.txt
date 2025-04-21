@@ -1,0 +1,2 @@
+can't open leveldb
+NotFound: /media/test/test2/000001.vlog: No such file or directory
