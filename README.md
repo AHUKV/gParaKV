@@ -112,8 +112,9 @@ gParaKV/
 ├── src/          # core library + CUDA kernels
 ├── bench/        # db_bench / ycsb‑c sources
 ├── workloads/    # YCSB‑C *.spec files
-├── tests/         # architecture diagrams, paper draft
 ├── tools/        # plotting & helper scripts
+├── pictures/     # architecture diagrams, paper draft
+├── evaluation/   # test script
 └── CMakeLists.txt
 ```
 
