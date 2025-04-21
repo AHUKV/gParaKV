@@ -114,7 +114,7 @@ gParaKV/
 ├── workloads/    # YCSB‑C *.spec files
 ├── tools/        # plotting & helper scripts
 ├── pictures/     # architecture diagrams, paper draft
-├── evaluation/   # test script
+├── script/   # test script
 └── CMakeLists.txt
 ```
 
