@@ -7,7 +7,7 @@
 
 <p align="center">
   <!-- Replace AFTER publishing -->
-  <a href="https://doi.org/10.5281/zenodo.FIXME"><img alt="DOI" src="https://img.shields.io/badge/doi-10.5281/zenodo.FIXME-blue.svg"></a>
+  <a href="https://doi.org/10.5281/zenodo.15254195.FIXME"><img alt="DOI" src="https://zenodo.org/badge/969822753.svg"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/AHUKV/gParaKV.svg"></a>
 </p>
 
