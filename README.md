@@ -21,6 +21,12 @@ This repository contains:
 1. **Modified LevelDB 1.23** implementation (“gParaKV”) with CUDA 12.3 kernels.  
 2. **Benchmarks & scripts** to reproduce the throughput/latency and space‑amplification results in our SC ’25 paper.
 
+There are two versions of the **gParaKV**:
+
+- **gParaKV (no GC)**: A version of the key–value store **without garbage collection**.
+- **gParaKV-GC (with GC)**: The **garbage collection** version, which includes a parallel GPGPU‑accelerated GC strategy, reducing overhead and improving space amplification. see <gParaKV-GC href="https://github.com/AHUKV/gParaKV-GC">
+
+
 All experiments were validated on **Ubuntu 22.04** with kernel **6.8.0‑52‑generic** and an **NVIDIA Tesla P100 GPGPU**.
 
 ---
@@ -117,4 +123,3 @@ gParaKV/
 ├── script/       # test script
 └── CMakeLists.txt
 ```
-
