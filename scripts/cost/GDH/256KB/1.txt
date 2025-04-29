@@ -1,0 +1,70 @@
+LevelDB:    version 1.20
+Date:       Fri Jan 10 15:10:12 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 100 ops
+... finished 200 ops
+... finished 300 ops
+... finished 400 ops
+... finished 500 ops
+... finished 600 ops
+... finished 700 ops
+... finished 800 ops
+... finished 900 ops
+... finished 1000 ops
+... finished 1500 ops
+... finished 2000 ops
+... finished 2500 ops
+... finished 3000 ops
+... finished 3500 ops
+... finished 4000 ops
+... finished 4500 ops
+... finished 5000 ops
+... finished 6000 ops
+... finished 7000 ops
+... finished 8000 ops
+... finished 9000 ops
+... finished 10000 ops
+... finished 15000 ops
+... finished 20000 ops
+... finished 25000 ops
+... finished 30000 ops
+... finished 35000 ops
+... finished 40000 ops
+... finished 45000 ops
+... finished 50000 ops
+... finished 60000 ops
+... finished 70000 ops
+... finished 80000 ops
+... finished 90000 ops
+... finished 100000 ops
+... finished 150000 ops
+... finished 200000 ops
+... finished 250000 ops
+... finished 300000 ops
+... finished 350000 ops
+Keys:       16 bytes each
+Values:     262144 bytes each (131072 bytes after compression)
+Entries:    390625
+RawSize:    97662.2 MB (estimated)
+FileSize:   48834.1 MB (estimated)
+WARNING: Optimization is disabled: benchmarks unnecessarily slow
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+fillrandom   :     426.655 micros/op 2343 ops/sec 166.662 seconds 390625 operations;  586.0 MB/s
+Write latency: 
+Microseconds per op:
+Count: 390625  Average: 426.6545  StdDev: 90.63
+Min: 314.0000  Median: 412.9562  Max: 14526.0000
+Percentiles: P50: 412.96 P75: 455.03 P90: 517.18 P99: 794.78 P99.9: 1032.39 P99.99: 1466.07
+------------------------------------------------------
+
+flush到磁盘: 0MB,		 写入磁盘: 0MB,		 写放大: -nan 
+原始写入磁盘: 97662MB,		 新写入磁盘量： 195345MB,		 空间放大： 2.00 
+compaction time: 0 us
+compaction throughput = (read + write) / time = (0.000000 + 0.000000) / 0.000000 =  -nan MB/s
+gc bytes read and write: 0
+gc time: 0
+gc throughput: -nan
+gc read and write time: 0 us
+gc computation time: 0 us

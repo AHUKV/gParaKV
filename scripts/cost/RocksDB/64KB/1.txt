@@ -1,0 +1,112 @@
+RocksDB:    version 9.8.4
+Date:       Fri Jan 10 14:27:36 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 1000 ops                              
+... finished 2000 ops                              
+... finished 3000 ops                              
+... finished 4000 ops                              
+... finished 5000 ops                              
+... finished 6000 ops                              
+... finished 7000 ops                              
+... finished 8000 ops                              
+... finished 9000 ops                              
+... finished 10000 ops                              
+... finished 11000 ops                              
+... finished 12000 ops                              
+... finished 13000 ops                              
+... finished 14000 ops                              
+... finished 15000 ops                              
+... finished 16000 ops                              
+... finished 17000 ops                              
+... finished 18000 ops                              
+... finished 19000 ops                              
+... finished 20000 ops                              
+... finished 21000 ops                              
+... finished 22000 ops                              
+... finished 23000 ops                              
+... finished 24000 ops                              
+... finished 25000 ops                              
+... finished 26000 ops                              
+... finished 30000 ops                              
+... finished 35000 ops                              
+... finished 40000 ops                              
+... finished 45000 ops                              
+... finished 50000 ops                              
+... finished 60000 ops                              
+long op: 2880037 micros                              ... finished 70000 ops                              
+... finished 80000 ops                              
+long op: 4359725 micros                              ... finished 90000 ops                              
+... finished 100000 ops                              
+long op: 6491256 micros                              long op: 9953402 micros                              ... finished 150000 ops                              
+long op: 11184562 micros                              ... finished 200000 ops                              
+long op: 11294624 micros                              long op: 14250861 micros                              ... finished 250000 ops                              
+long op: 13695515 micros                              ... finished 300000 ops                              
+long op: 15769819 micros                              ... finished 350000 ops                              
+long op: 16242656 micros                              long op: 18052688 micros                              ... finished 400000 ops                              
+long op: 20242425 micros                              ... finished 450000 ops                              
+long op: 20700315 micros                              ... finished 500000 ops                              
+long op: 22238407 micros                              long op: 22710776 micros                              long op: 21233759 micros                              ... finished 600000 ops                              
+long op: 24922825 micros                              long op: 23891022 micros                              long op: 23697148 micros                              ... finished 700000 ops                              
+long op: 23732243 micros                              long op: 24136953 micros                              long op: 21919198 micros                              ... finished 800000 ops                              
+long op: 21510057 micros                              long op: 5613407 micros                              long op: 17426476 micros                              long op: 9884031 micros                              long op: 7625688 micros                              ... finished 900000 ops                              
+long op: 1456706 micros                              long op: 8599500 micros                              long op: 7645093 micros                              long op: 14305882 micros                              ... finished 1000000 ops                              
+long op: 17530919 micros                              long op: 17389340 micros                              long op: 9876585 micros                              long op: 7509248 micros                              long op: 7005529 micros                              long op: 9879559 micros                              long op: 9773603 micros                              long op: 9762332 micros                              long op: 9536614 micros                              ... finished 1100000 ops                              
+long op: 6078703 micros                              long op: 9881842 micros                              long op: 9766690 micros                              long op: 4000396 micros                              long op: 4785640 micros                              long op: 9883088 micros                              long op: 9757308 micros                              long op: 4765240 micros                              long op: 4580952 micros                              long op: 9877481 micros                              long op: 9772053 micros                              long op: 2783100 micros                              long op: 4245759 micros                              long op: 9883456 micros                              long op: 9755346 micros                              long op: 2570500 micros                              ... finished 1200000 ops                              
+long op: 4642612 micros                              long op: 9879839 micros                              long op: 9766144 micros                              long op: 2086347 micros                              long op: 3984460 micros                              long op: 9878427 micros                              long op: 9770557 micros                              long op: 3412225 micros                              long op: 12320420 micros                              long op: 7440540 micros                              long op: 3748893 micros                              long op: 9881075 micros                              long op: 9769457 micros                              long op: 7212688 micros                              ... finished 1300000 ops                              
+long op: 2891086 micros                              long op: 9880000 micros                              long op: 7319224 micros                              long op: 7787390 micros                              long op: 9876567 micros                              long op: 9773927 micros                              long op: 9769368 micros                              long op: 9796190 micros                              long op: 2680690 micros                              long op: 3459117 micros                              long op: 9868798 micros                              long op: 9785139 micros                              long op: 5314343 micros                              ... finished 1400000 ops                              
+long op: 6582809 micros                              long op: 9879912 micros                              long op: 9772916 micros                              long op: 9768041 micros                              long op: 9768242 micros                              long op: 1877692 micros                              long op: 2878608 micros                              long op: 9876785 micros                              long op: 9770041 micros                              long op: 4711560 micros                              long op: 4545523 micros                              long op: 9876108 micros                              long op: 9775820 micros                              long op: 9768261 micros                              long op: 9764990 micros                              long op: 4817023 micros                              long op: 12323357 micros                              ... finished 1500000 ops                              
+long op: 8943358 micros                              long op: 2996985 micros                              long op: 9882135 micros                              long op: 9764101 micros                              long op: 4610028 micros                              long op: 4376074 micros                              Set seed to 1736490456975539 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     65536 bytes each (32768 bytes after compression)
+Entries:    1562500
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    97680.1 MB (estimated)
+FileSize:   48852.0 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+DB path: [/media/test]
+fillrandom   :     830.448 micros/op 1204 ops/sec 1297.160 seconds 1562000 operations;   75.3 MB/s
+Microseconds per write:
+Count: 1562 Average: 830445.1044  StdDev: 2885958.38
+Min: 84476  Median: 165746.8354  Max: 24922825
+Percentiles: P50: 165746.84 P75: 214451.83 P99: 16695384.62 P99.9: 24922825.00 P99.99: 24922825.00
+------------------------------------------------------
+(   75000,  110000 ]       47   3.009%   3.009% #
+(  110000,  170000 ]      790  50.576%  53.585% ##########
+(  170000,  250000 ]      602  38.540%  92.125% ########
+(  250000,  380000 ]       16   1.024%  93.150% 
+(  380000,  570000 ]        1   0.064%  93.214% 
+( 1200000, 1900000 ]        2   0.128%  93.342% 
+( 1900000, 2900000 ]        7   0.448%  93.790% 
+( 2900000, 4300000 ]        7   0.448%  94.238% 
+( 4300000, 6500000 ]       14   0.896%  95.134% 
+( 6500000, 9800000 ]       33   2.113%  97.247% 
+( 9800000, 14000000 ]       23   1.472%  98.720% 
+( 14000000, 22000000 ]       13   0.832%  99.552% 
+( 22000000, 33000000 ]        7   0.448% 100.000% 
+
+flush到磁盘: 97624MB,		 写入磁盘: 655596MB,		 写放大: 6.72 
+原始写入磁盘: 97649MB,		 新写入磁盘量： 0MB,		 空间放大： 0.00 
+compaction time: 1201880651 us
+compaction throughput = (read + write) / time = (585221.893067 + 557971.680975) / 1201.880651 =  951.17 MB/s
+reading time: 381307906 us
+writing time: 487951625 us
+merge-sorting time: 332621120 us
+gc bytes read and write: 0
+gc time: 0
+gc throughput: -nan
+gc read and write time: 0 us
+gc computation time: 0 us

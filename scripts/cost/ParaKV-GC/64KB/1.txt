@@ -1,0 +1,80 @@
+LevelDB:    version 1.23
+Date:       Tue Jan  7 21:59:31 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 100
+... finished 200
+... finished 300
+... finished 400
+... finished 500
+... finished 600
+... finished 700
+... finished 800
+... finished 900
+... finished 1000
+... finished 1500
+... finished 2000
+... finished 2500
+... finished 3000
+... finished 3500
+... finished 4000
+... finished 4500
+... finished 5000
+... finished 6000
+... finished 7000
+... finished 8000
+... finished 9000
+... finished 10000
+... finished 15000
+... finished 20000
+... finished 25000
+... finished 30000
+... finished 35000
+... finished 40000
+... finished 45000
+... finished 50000
+... finished 60000
+... finished 70000
+... finished 80000
+... finished 90000
+... finished 100000
+... finished 150000
+... finished 200000
+... finished 250000
+... finished 300000
+... finished 350000
+... finished 400000
+... finished 450000
+... finished 500000
+... finished 600000
+... finished 700000
+... finished 800000
+... finished 900000
+... finished 1000000
+... finished 1100000
+... finished 1200000
+... finished 1300000
+... finished 1400000
+... finished 1500000
+Keys:       16 bytes each
+Values:     65536 bytes each (32768 bytes after compression)
+Entries:    1562500
+RawSize:    97680.1 MB (estimated)
+FileSize:   48852.0 MB (estimated)
+------------------------------------------------
+fillrandom   :      56.872 micros/op 17583 ops/sec 88.862 seconds 1562500 operations; 1099.2 MB/s
+Microseconds per op:
+Count: 1562500  Average: 56.8715  StdDev: 83.71
+Min: 37.0000  Median: 54.5366  Max: 88995.0000
+Percentiles: P50: 54.54 P75: 59.12 P90: 68.90 P99: 120.66 P99.9: 177.62 P99.99: 362.50
+------------------------------------------------------
+
+flush到磁盘: 53MB,		 写入磁盘: 165MB,		 写放大: 3.10 
+原始写入磁盘: 97680MB,		 新写入磁盘量： 97177MB,		 空间放大： 0.99 
+compaction time: 939495
+compaction throughput = (read + write) / time = (124.325525 + 112.022427) / 0.939495 =  251.57 MB/s
+gc bytes read and write: 2707212872
+gc time: 18762275
+gc throughput: 137.61
+gc read and write time: 6482420 us
+gc computation time: 12279855 us

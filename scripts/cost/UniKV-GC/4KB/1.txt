@@ -1,0 +1,319 @@
+init env threadpool
+write_buffer_size:64 MB
+max_file_size:2 MB
+block_size:4 KB
+max_open_files:10000 
+LevelDB:    version 1.20
+Date:       Sun Jan 12 17:26:04 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+Keys:       16 bytes each
+Values:     4096 bytes each (4096 bytes after compression)
+Entries:    25000000
+RawSize:    98037.7 MB (estimated)
+FileSize:   98037.7 MB (estimated)
+WARNING: Optimization is disabled: benchmarks unnecessarily slow
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+before Open in run
+after rebuildTree,totalPartitions,:2,NewestPartition:1
+min_log:0,partition:0
+prev_log:0,partition:0
+min_log:0,partition:1
+prev_log:0,partition:1
+filenames size:12,partition:0
+before RecoverLogFile,log.size:0
+before initFileMetadataAndprefetchPinterFile
+after initFileMetadataAndprefetchPinterFile
+partition:0,new_log_number:3
+partition:1,new_log_number:4
+SSTableID:3438
+SSTableID:3387
+after recoveryHashTable
+recoveryIndexTime:2619142.000000
+recoveryTime:2623382.000000
+after rebuildTree,totalPartitions,:2,NewestPartition:1
+min_log:0,partition:0
+prev_log:0,partition:0
+min_log:0,partition:1
+prev_log:0,partition:1
+filenames size:12,partition:0
+before RecoverLogFile,log.size:0
+before initFileMetadataAndprefetchPinterFile
+after initFileMetadataAndprefetchPinterFile
+partition:0,new_log_number:3
+partition:1,new_log_number:4
+SSTableID:3438
+SSTableID:3387
+after recoveryHashTable
+recoveryIndexTime:2834967.000000
+recoveryTime:2836832.000000
+LogPrefixName:/media/test/logfile-
+indexCharKey:0000000051989072
+leaf node,partition:0
+leaf node,partition:1
+before initFileMetadataAndprefetchPinterFile
+after initFileMetadataAndprefetchPinterFile
+partition:0, pfiles_ size:0
+partition:0, fileMetaVec size:0
+partition:1, pfiles_ size:0
+partition:1, fileMetaVec size:0
+recoveryIndexTime:2619142.000000
+NewestPartition:1
+P:0, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:1147.000000,totalMergeTime:0.000000
+P:1, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:728.000000,totalMergeTime:0.000000
+P:0, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
+P:1, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
+totalCostGetLn:0.000000
+Get in Memtable:0,IMemtable:0
+LogPrefixName:/media/test/logfile-
+indexCharKey:0000000051989072
+leaf node,partition:0
+leaf node,partition:1
+before initFileMetadataAndprefetchPinterFile
+after initFileMetadataAndprefetchPinterFile
+partition:0, pfiles_ size:0
+partition:0, fileMetaVec size:0
+partition:1, pfiles_ size:0
+partition:1, fileMetaVec size:0
+recoveryIndexTime:2834967.000000
+before RunBenchmark
+... finished 100 ops                              ... finished 200 ops                              ... finished 300 ops                              ... finished 400 ops                              ... finished 500 ops                              ... finished 600 ops                              ... finished 700 ops                              ... finished 800 ops                              ... finished 900 ops                              ... finished 1000 ops                              ... finished 1500 ops                              ... finished 2000 ops                              ... finished 2500 ops                              ... finished 3000 ops                              ... finished 3500 ops                              ... finished 4000 ops                              ... finished 4500 ops                              ... finished 5000 ops                              ... finished 6000 ops                              ... finished 7000 ops                              ... finished 8000 ops                              ... finished 9000 ops                              ... finished 10000 ops                              ... finished 15000 ops                              ... finished 20000 ops                              ... finished 25000 ops                              ... finished 30000 ops                              ... finished 35000 ops                              ... finished 40000 ops                              ... finished 45000 ops                              ... finished 50000 ops                              ... finished 60000 ops                              ... finished 70000 ops                              ... finished 80000 ops                              ... finished 90000 ops                              ... finished 100000 ops                              ... finished 150000 ops                              ... finished 200000 ops                              ... finished 250000 ops                              ... finished 300000 ops                              ... finished 350000 ops                              ... finished 400000 ops                              ... finished 450000 ops                              ... finished 500000 ops                              ... finished 600000 ops                              ... finished 700000 ops                              ... finished 800000 ops                              ... finished 900000 ops                              ... finished 1000000 ops                              ... finished 1100000 ops                              ... finished 1200000 ops                              ... finished 1300000 ops                              ... finished 1400000 ops                              ... finished 1500000 ops                              ... finished 1600000 ops                              ... finished 1700000 ops                              ... finished 1800000 ops                              ... finished 1900000 ops                              ... finished 2000000 ops                              ... finished 2100000 ops                              ... finished 2200000 ops                              ... finished 2300000 ops                              ... finished 2400000 ops                              ... finished 2500000 ops                              ... finished 2600000 ops                              ... finished 2700000 ops                              ... finished 2800000 ops                              ... finished 2900000 ops                              ... finished 3000000 ops                              ... finished 3100000 ops                              ... finished 3200000 ops                              ... finished 3300000 ops                              ... finished 3400000 ops                              ... finished 3500000 ops                              ... finished 3600000 ops                              ... finished 3700000 ops                              ... finished 3800000 ops                              ... finished 3900000 ops                              ... finished 4000000 ops                              ... finished 4100000 ops                              ... finished 4200000 ops                              ... finished 4300000 ops                              ... finished 4400000 ops                              ... finished 4500000 ops                              ... finished 4600000 ops                              ... finished 4700000 ops                              ... finished 4800000 ops                              ... finished 4900000 ops                              ... finished 5000000 ops                              ... finished 5100000 ops                              ... finished 5200000 ops                              ... finished 5300000 ops                              ... finished 5400000 ops                              ... finished 5500000 ops                              ... finished 5600000 ops                              ... finished 5700000 ops                              ... finished 5800000 ops                              ... finished 5900000 ops                              ... finished 6000000 ops                              ... finished 6100000 ops                              ... finished 6200000 ops                              ... finished 6300000 ops                              ... finished 6400000 ops                              ... finished 6500000 ops                              ... finished 6600000 ops                              ... finished 6700000 ops                              ... finished 6800000 ops                              ... finished 6900000 ops                              ... finished 7000000 ops                              ... finished 7100000 ops                              ... finished 7200000 ops                              ... finished 7300000 ops                              ... finished 7400000 ops                              ... finished 7500000 ops                              ... finished 7600000 ops                              ... finished 7700000 ops                              ... finished 7800000 ops                              ... finished 7900000 ops                              ... finished 8000000 ops                              splitLimit:43999672960, curPartitionSize:4434936653,continueFlushBytes:4434936653, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:0,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:0,L2:0
+Compacting 66@0 +0@1 + files in partition=0
+-two Compacting 66@0 +0@1 + files in partition=0
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:84 ,L1:0,L2:0
+merge time:15886233.000000,totalReadTime:3691814.000000,totalSortTime:132698.000000,totalWriteTime:11667596.000000,totalUpHashTime:11.000000,inPutItearTime:282.000000,otherTime:117990.000000
+splitLimit:43999672960, curPartitionSize:5159221248,continueFlushBytes:8869881135, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:1,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:1,L2:1
+Compacting 66@0 +1@1 + files in partition=0
+-two Compacting 66@0 +1@1 + files in partition=0
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:87 ,L1:1,L2:1
+merge time:19143384.000000,totalReadTime:5646416.000000,totalSortTime:228339.000000,totalWriteTime:12550855.000000,totalUpHashTime:10.000000,inPutItearTime:189.000000,otherTime:247891.000000
+splitLimit:43999672960, curPartitionSize:5825166848,continueFlushBytes:13304821491, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:1,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:1,L2:1
+Compacting 66@0 +1@1 + files in partition=0
+-two Compacting 66@0 +1@1 + files in partition=0
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:91 ,L1:1,L2:1
+merge time:22378763.000000,totalReadTime:7520070.000000,totalSortTime:326916.000000,totalWriteTime:13498252.000000,totalUpHashTime:11.000000,inPutItearTime:253.000000,otherTime:359122.000000
+splitLimit:43999672960, curPartitionSize:6467499008,continueFlushBytes:17739763228, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:1,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:1,L2:1
+Compacting 66@0 +1@1 + files in partition=0
+-two Compacting 66@0 +1@1 + files in partition=0
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:95 ,L1:1,L2:1
+merge time:25221693.000000,totalReadTime:9199761.000000,totalSortTime:426364.000000,totalWriteTime:14280309.000000,totalUpHashTime:10.000000,inPutItearTime:91.000000,otherTime:459349.000000
+splitLimit:43999672960, curPartitionSize:7080966144,continueFlushBytes:22174702222, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:1,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:1,L2:1
+Compacting 66@0 +1@1 + files in partition=0
+-two Compacting 66@0 +1@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:1,L2:1
+merge time:28046573.000000,totalReadTime:10611959.000000,totalSortTime:499482.000000,totalWriteTime:15405855.000000,totalUpHashTime:11.000000,inPutItearTime:164.000000,otherTime:518842.000000
+splitLimit:43999672960, curPartitionSize:7664360960,continueFlushBytes:26609642563, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
+Compacting 66@0 +2@1 + files in partition=0
+-two Compacting 66@0 +2@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:2,L2:2
+merge time:31156215.000000,totalReadTime:12540578.000000,totalSortTime:604515.000000,totalWriteTime:16164438.000000,totalUpHashTime:10.000000,inPutItearTime:220.000000,otherTime:625830.000000
+splitLimit:43999672960, curPartitionSize:8228968448,continueFlushBytes:31044585856, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
+Compacting 66@0 +2@1 + files in partition=0
+-two Compacting 66@0 +2@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:2,L2:2
+merge time:33294682.000000,totalReadTime:13878703.000000,to... finished 8100000 ops                              ... finished 8200000 ops                              ... finished 8300000 ops                              ... finished 8400000 ops                              ... finished 8500000 ops                              ... finished 8600000 ops                              ... finished 8700000 ops                              ... finished 8800000 ops                              ... finished 8900000 ops                              ... finished 9000000 ops                              ... finished 9100000 ops                              ... finished 9200000 ops                              ... finished 9300000 ops                              ... finished 9400000 ops                              ... finished 9500000 ops                              ... finished 9600000 ops                              ... finished 9700000 ops                              ... finished 9800000 ops                              ... finished 9900000 ops                              ... finished 10000000 ops                              ... finished 10100000 ops                              ... finished 10200000 ops                              ... finished 10300000 ops                              ... finished 10400000 ops                              ... finished 10500000 ops                              ... finished 10600000 ops                              ... finished 10700000 ops                              ... finished 10800000 ops                              ... finished 10900000 ops                              ... finished 11000000 ops                              ... finished 11100000 ops                              ... finished 11200000 ops                              ... finished 11300000 ops                              ... finished 11400000 ops                              ... finished 11500000 ops                              ... finished 11600000 ops                              ... finished 11700000 ops                              ... finished 11800000 ops                              ... finished 11900000 ops                              ... finished 12000000 ops                              ... finished 12100000 ops                              ... finished 12200000 ops                              ... finished 12300000 ops                              ... finished 12400000 ops                              ... finished 12500000 ops                              ... finished 12600000 ops                              ... finished 12700000 ops                              ... finished 12800000 ops                              ... finished 12900000 ops                              ... finished 13000000 ops                              ... finished 13100000 ops                              ... finished 13200000 ops                              ... finished 13300000 ops                              ... finished 13400000 ops                              ... finished 13500000 ops                              ... finished 13600000 ops                              ... finished 13700000 ops                              ... finished 13800000 ops                              ... finished 13900000 ops                              ... finished 14000000 ops                              ... finished 14100000 ops                              ... finished 14200000 ops                              ... finished 14300000 ops                              ... finished 14400000 ops                              ... finished 14500000 ops                              ... finished 14600000 ops                              ... finished 14700000 ops                              ... finished 14800000 ops                              ... finished 14900000 ops                              talSortTime:672322.000000,totalWriteTime:16674168.000000,totalUpHashTime:12.000000,inPutItearTime:144.000000,otherTime:703397.000000
+splitLimit:43999672960, curPartitionSize:8772312064,continueFlushBytes:35479524466, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
+Compacting 66@0 +2@1 + files in partition=0
+-two Compacting 66@0 +2@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:2,L2:2
+merge time:35699859.000000,totalReadTime:15223633.000000,totalSortTime:742144.000000,totalWriteTime:17405883.000000,totalUpHashTime:18.000000,inPutItearTime:209.000000,otherTime:807987.000000
+splitLimit:43999672960, curPartitionSize:9293662208,continueFlushBytes:39914460889, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
+Compacting 66@0 +2@1 + files in partition=0
+-two Compacting 66@0 +2@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:2,L2:2
+merge time:38261536.000000,totalReadTime:16692455.000000,totalSortTime:826393.000000,totalWriteTime:18217879.000000,totalUpHashTime:12.000000,inPutItearTime:191.000000,otherTime:852464.000000
+splitLimit:43999672960, curPartitionSize:9797568512,continueFlushBytes:44349401238, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:41533849.000000,totalReadTime:18433964.000000,totalSortTime:916120.000000,totalWriteTime:19386617.000000,totalUpHashTime:25.000000,inPutItearTime:208.000000,otherTime:940841.000000
+splitLimit:43999672960, curPartitionSize:10280880128,continueFlushBytes:48784339865, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:42494226.000000,totalReadTime:19210889.000000,totalSortTime:956746.000000,totalWriteTime:19386469.000000,totalUpHashTime:10.000000,inPutItearTime:169.000000,otherTime:991735.000000
+splitLimit:43999672960, curPartitionSize:10858407936,continueFlushBytes:53219279223, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:44953598.000000,totalReadTime:20661224.000000,totalSortTime:1027299.000000,totalWriteTime:20114358.000000,totalUpHashTime:11.000000,inPutItearTime:139.000000,otherTime:1058092.000000
+splitLimit:43999672960, curPartitionSize:11382559744,continueFlushBytes:57654221469, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:47089513.000000,totalReadTime:21891258.000000,totalSortTime:1088624.000000,totalWriteTime:20779470.000000,totalUpHashTime:12.000000,inPutItearTime:105.000000,otherTime:1119507.000000
+splitLimit:43999672960, curPartitionSize:11883458560,continueFlushBytes:62089159521, continueSplitCounts:0
+in PickAllCompaction, partition:0... finished 15000000 ops                              ... finished 15100000 ops                              ... finished 15200000 ops                              ... finished 15300000 ops                              ... finished 15400000 ops                              ... finished 15500000 ops                              ... finished 15600000 ops                              ... finished 15700000 ops                              ... finished 15800000 ops                              ... finished 15900000 ops                              ... finished 16000000 ops                              ... finished 16100000 ops                              ... finished 16200000 ops                              ... finished 16300000 ops                              ... finished 16400000 ops                              ... finished 16500000 ops                              ... finished 16600000 ops                              ... finished 16700000 ops                              ... finished 16800000 ops                              ... finished 16900000 ops                              ... finished 17000000 ops                              ... finished 17100000 ops                              ... finished 17200000 ops                              ... finished 17300000 ops                              ... finished 17400000 ops                              ... finished 17500000 ops                              ... finished 17600000 ops                              ... finished 17700000 ops                              ... finished 17800000 ops                              ... finished 17900000 ops                              ... finished 18000000 ops                              ... finished 18100000 ops                              ... finished 18200000 ops                              ... finished 18300000 ops                              ... finished 18400000 ops                              ... finished 18500000 ops                              ... finished 18600000 ops                              ... finished 18700000 ops                              ... finished 18800000 ops                              ... finished 18900000 ops                              ... finished 19000000 ops                              ... finished 19100000 ops                              ... finished 19200000 ops                              ... finished 19300000 ops                              ... finished 19400000 ops                              ... finished 19500000 ops                              ... finished 19600000 ops                              ... finished 19700000 ops                              ... finished 19800000 ops                              ... finished 19900000 ops                              ... finished 20000000 ops                              ... finished 20100000 ops                              ... finished 20200000 ops                              ... finished 20300000 ops                              ... finished 20400000 ops                              ... finished 20500000 ops                              ... finished 20600000 ops                              ... finished 20700000 ops                              ... finished 20800000 ops                              ... finished 20900000 ops                              ... finished 21000000 ops                              ... finished 21100000 ops                              ... finished 21200000 ops                              ... finished 21300000 ops                              ... finished 21400000 ops                              ... finished 21500000 ops                              ... finished 21600000 ops                              ... finished 21700000 ops                              ... finished 21800000 ops                              ,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:48919539.000000,totalReadTime:22861883.000000,totalSortTime:1219390.000000,totalWriteTime:21318934.000000,totalUpHashTime:11.000000,inPutItearTime:199.000000,otherTime:1181842.000000
+splitLimit:43999672960, curPartitionSize:12349214720,continueFlushBytes:66524102497, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
+Compacting 66@0 +3@1 + files in partition=0
+-two Compacting 66@0 +3@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:3,L2:3
+merge time:51068561.000000,totalReadTime:24061949.000000,totalSortTime:1198775.000000,totalWriteTime:22109309.000000,totalUpHashTime:13.000000,inPutItearTime:152.000000,otherTime:1233215.000000
+splitLimit:43999672960, curPartitionSize:12797394944,continueFlushBytes:70959042236, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:52606132.000000,totalReadTime:25003976.000000,totalSortTime:1294765.000000,totalWriteTime:22445985.000000,totalUpHashTime:10.000000,inPutItearTime:133.000000,otherTime:1295846.000000
+splitLimit:43999672960, curPartitionSize:13226807296,continueFlushBytes:75393976729, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:54494371.000000,totalReadTime:26035344.000000,totalSortTime:1345045.000000,totalWriteTime:23077738.000000,totalUpHashTime:31.000000,inPutItearTime:118.000000,otherTime:1352903.000000
+splitLimit:43999672960, curPartitionSize:13611468800,continueFlushBytes:79828921675, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:56023533.000000,totalReadTime:26962020.000000,totalSortTime:1364650.000000,totalWriteTime:23510780.000000,totalUpHashTime:10.000000,inPutItearTime:141.000000,otherTime:1400889.000000
+splitLimit:43999672960, curPartitionSize:14012718080,continueFlushBytes:84263867993, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:57888839.000000,totalReadTime:27892668.000000,totalSortTime:1412627.000000,totalWriteTime:24235119.000000,totalUpHashTime:11.000000,inPutItearTime:115.000000,otherTime:1452301.000000
+splitLimit:43999672960, curPartitionSize:14387809280,continueFlushBytes:88698805865, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after A... finished 21900000 ops                              ... finished 22000000 ops                              ... finished 22100000 ops                              ... finished 22200000 ops                              ... finished 22300000 ops                              ... finished 22400000 ops                              ... finished 22500000 ops                              ... finished 22600000 ops                              ... finished 22700000 ops                              ... finished 22800000 ops                              ... finished 22900000 ops                              ... finished 23000000 ops                              ... finished 23100000 ops                              ... finished 23200000 ops                              ... finished 23300000 ops                              ... finished 23400000 ops                              ... finished 23500000 ops                              ... finished 23600000 ops                              ... finished 23700000 ops                              ... finished 23800000 ops                              ... finished 23900000 ops                              ... finished 24000000 ops                              ... finished 24100000 ops                              ... finished 24200000 ops                              ... finished 24300000 ops                              ... finished 24400000 ops                              ... finished 24500000 ops                              ... finished 24600000 ops                              ... finished 24700000 ops                              ... finished 24800000 ops                              ... finished 24900000 ops                              ... finished 25000000 ops                              ddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:59143699.000000,totalReadTime:28832841.000000,totalSortTime:1446783.000000,totalWriteTime:24385869.000000,totalUpHashTime:13.000000,inPutItearTime:137.000000,otherTime:1497804.000000
+splitLimit:43999672960, curPartitionSize:14749541376,continueFlushBytes:93133745342, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
+Compacting 66@0 +4@1 + files in partition=0
+-two Compacting 66@0 +4@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:4,L2:4
+merge time:60638880.000000,totalReadTime:29082031.000000,totalSortTime:1468036.000000,totalWriteTime:25522141.000000,totalUpHashTime:12.000000,inPutItearTime:157.000000,otherTime:1534833.000000
+splitLimit:43999672960, curPartitionSize:15085040640,continueFlushBytes:97568686555, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:5,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:5,L2:5
+Compacting 66@0 +5@1 + files in partition=0
+-two Compacting 66@0 +5@1 + files in partition=0
+Too many L0 files:99,partition:0; stop and waiting...
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:99 ,L1:5,L2:5
+merge time:62653183.000000,totalReadTime:30405935.000000,totalSortTime:1528621.000000,totalWriteTime:26003346.000000,totalUpHashTime:11.000000,inPutItearTime:188.000000,otherTime:1570208.000000
+splitLimit:43999672960, curPartitionSize:15459550208,continueFlushBytes:102003629538, continueSplitCounts:0
+in PickAllCompaction, partition:0,L0 size:66,L1 size:5,L2:0
+before DoCompactionWork NumFiles L0:66 ,L1:5,L2:5
+Compacting 66@0 +5@1 + files in partition=0
+-two Compacting 66@0 +5@1 + files in partition=0
+fillrandom   :      64.794 micros/op;   60.5 MB/s;  15433.598 op/s
+compaction time: 929055338 us
+compaction throughput = (read + write) / time = (96216.069051 + 3436.374691) / 929.055338 =  107.26 MB/s
+gc bytes read and write: 0
+gc time: 0
+gc throughput: -nan
+gc read and write time: 0 us
+gc computation time: 0 us
+writeDataSize:    103817922507
+writeDataSizeActual:    203159447044
+
+                               Compactions
+Partition  Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+--------------------------------------------------
+  0       0       93 5959.736   565.213 93048.750 99008.486
+  0       1        5  269.056   929.055 3167.319 93243.840
+--------------------------------------------------
+--------------------------------------------------
+
+approximate-memory-usage: 
+65594151
+readDataSize:    0
+readDataSizeActual:    0
+db_->tableCacheNum:    0
+db_->blockCacheNum:    0
+ db_->readIn0:    0
+ db_->readIn1:    0
+ db_->readMem:    0
+ db_->readImm:    0
+ db_->LevelRead:    0
+compact->compaction->level():0
+after AddInputDeletions NumFiles L0:93 ,L1:5,L2:5
+merge time:64004919.000000,totalReadTime:31240502.000000,totalSortTime:1643875.000000,totalWriteTime:26276755.000000,totalUpHashTime:11.000000,inPutItearTime:111.000000,otherTime:1613607.000000
+NewestPartition:1
+P:0, totalLogTime:418024657.000000,totalMemTableTime:122381953.000000,totalFlushTime:648040032.000000,totalMergeTime:1017525923.000000
+P:1, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:13391.000000,totalMergeTime:0.000000
+P:0, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
+P:1, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
+totalCostGetLn:0.000000
+Get in Memtable:0,IMemtable:0

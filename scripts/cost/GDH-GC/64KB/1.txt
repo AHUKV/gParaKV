@@ -1,0 +1,83 @@
+LevelDB:    version 1.20
+Date:       Fri Jan 10 19:33:48 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 100 ops
+... finished 200 ops
+... finished 300 ops
+... finished 400 ops
+... finished 500 ops
+... finished 600 ops
+... finished 700 ops
+... finished 800 ops
+... finished 900 ops
+... finished 1000 ops
+... finished 1500 ops
+... finished 2000 ops
+... finished 2500 ops
+... finished 3000 ops
+... finished 3500 ops
+... finished 4000 ops
+... finished 4500 ops
+... finished 5000 ops
+... finished 6000 ops
+... finished 7000 ops
+... finished 8000 ops
+... finished 9000 ops
+... finished 10000 ops
+... finished 15000 ops
+... finished 20000 ops
+... finished 25000 ops
+... finished 30000 ops
+... finished 35000 ops
+... finished 40000 ops
+... finished 45000 ops
+... finished 50000 ops
+... finished 60000 ops
+... finished 70000 ops
+... finished 80000 ops
+... finished 90000 ops
+... finished 100000 ops
+... finished 150000 ops
+... finished 200000 ops
+... finished 250000 ops
+... finished 300000 ops
+... finished 350000 ops
+... finished 400000 ops
+... finished 450000 ops
+... finished 500000 ops
+... finished 600000 ops
+... finished 700000 ops
+... finished 800000 ops
+... finished 900000 ops
+... finished 1000000 ops
+... finished 1100000 ops
+... finished 1200000 ops
+... finished 1300000 ops
+... finished 1400000 ops
+... finished 1500000 ops
+Keys:       16 bytes each
+Values:     65536 bytes each (32768 bytes after compression)
+Entries:    1562500
+RawSize:    97680.1 MB (estimated)
+FileSize:   48852.0 MB (estimated)
+WARNING: Optimization is disabled: benchmarks unnecessarily slow
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+fillrandom   :     117.710 micros/op 8495 ops/sec 183.922 seconds 1562500 operations;  531.1 MB/s
+Write latency: 
+Microseconds per op:
+Count: 1562500  Average: 117.7104  StdDev: 73.50
+Min: 61.0000  Median: 109.6554  Max: 13230.0000
+Percentiles: P50: 109.66 P75: 129.91 P90: 154.41 P99: 233.47 P99.9: 392.40 P99.99: 3767.72
+------------------------------------------------------
+
+flush到磁盘: 33MB,		 写入磁盘: 45MB,		 写放大: 1.36 
+原始写入磁盘: 97680MB,		 新写入磁盘量： 187556MB,		 空间放大： 1.92 
+compaction time: 621504 us
+compaction throughput = (read + write) / time = (19.093579 + 11.992502) / 0.621504 =  50.02 MB/s
+gc bytes read and write: 4157649552
+gc time: 10055328
+gc throughput: 394.32
+gc read and write time: 10043645 us
+gc computation time: 11683 us

@@ -1,0 +1,96 @@
+RocksDB:    version 9.8.4
+Date:       Thu Jan  9 22:09:23 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 1000 ops                              
+... finished 2000 ops                              
+... finished 3000 ops                              
+... finished 4000 ops                              
+... finished 5000 ops                              
+... finished 6000 ops                              
+... finished 7000 ops                              
+... finished 8000 ops                              
+... finished 9000 ops                              
+... finished 10000 ops                              
+... finished 11000 ops                              
+... finished 12000 ops                              
+... finished 13000 ops                              
+... finished 14000 ops                              
+... finished 15000 ops                              
+... finished 16000 ops                              
+... finished 17000 ops                              
+... finished 18000 ops                              
+... finished 19000 ops                              
+... finished 20000 ops                              
+... finished 21000 ops                              
+... finished 22000 ops                              
+... finished 23000 ops                              
+... finished 24000 ops                              
+... finished 25000 ops                              
+... finished 26000 ops                              
+... finished 30000 ops                              
+... finished 35000 ops                              
+... finished 40000 ops                              
+... finished 45000 ops                              
+... finished 50000 ops                              
+... finished 60000 ops                              
+long op: 1153767 micros                              ... finished 70000 ops                              
+... finished 80000 ops                              
+... finished 90000 ops                              
+long op: 5007307 micros                              ... finished 100000 ops                              
+long op: 13792126 micros                              long op: 22179884 micros                              ... finished 150000 ops                              
+long op: 14098217 micros                              long op: 21334337 micros                              long op: 16005001 micros                              long op: 23408284 micros                              ... finished 200000 ops                              
+long op: 19137010 micros                              long op: 22805861 micros                              ... finished 250000 ops                              
+long op: 23476461 micros                              long op: 29670501 micros                              long op: 56719078 micros                              ... finished 300000 ops                              
+long op: 23607044 micros                              long op: 35617390 micros                              ... finished 350000 ops                              
+long op: 25665807 micros                              long op: 37864934 micros                              Set seed to 1736431759205727 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     262144 bytes each (131072 bytes after compression)
+Entries:    390625
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    97662.2 MB (estimated)
+FileSize:   48834.1 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+DB path: [/media/test]
+fillrandom   :    1458.664 micros/op 685 ops/sec 568.879 seconds 390000 operations;  171.4 MB/s
+Microseconds per write:
+Count: 390 Average: 1458563.7897  StdDev: 5280835.10
+Min: 353835  Median: 482264.7059  Max: 56719078
+Percentiles: P50: 482264.71 P75: 536750.00 P99: 31585714.29 P99.9: 56719078.00 P99.99: 56719078.00
+------------------------------------------------------
+(  250000,  380000 ]       12   3.077%   3.077% #
+(  380000,  570000 ]      340  87.179%  90.256% #################
+(  570000,  860000 ]       19   4.872%  95.128% #
+(  860000, 1200000 ]        3   0.769%  95.897% 
+( 4300000, 6500000 ]        1   0.256%  96.154% 
+( 9800000, 14000000 ]        1   0.256%  96.410% 
+( 14000000, 22000000 ]        4   1.026%  97.436% 
+( 22000000, 33000000 ]        7   1.795%  99.231% 
+( 33000000, 49000000 ]        2   0.513%  99.744% 
+( 49000000, 74000000 ]        1   0.256% 100.000% 
+
+flush到磁盘: 12MB,		 写入磁盘: 111MB,		 写放大: 8.98 
+原始写入磁盘: 97506MB,		 新写入磁盘量： 158864MB,		 空间放大： 1.63 
+compaction time: 521850611 us
+compaction throughput = (read + write) / time = (103.817010 + 99.031580) / 521.850611 =  0.39 MB/s
+reading time: 26605 us
+writing time: 461611 us
+merge-sorting time: 521362395 us
+gc bytes read and write: 490980479664
+gc time: 511857653
+gc throughput: 914.78
+gc read and write time: 617221105 us
+gc computation time: 18446744073604188164 us

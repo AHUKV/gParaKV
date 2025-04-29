@@ -1,0 +1,233 @@
+LevelDB:    version 1.23
+Date:       Sat Jan 11 16:09:38 2025
+CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+CPUCache:   25600 KB
+... finished 100
+... finished 200
+... finished 300
+... finished 400
+... finished 500
+... finished 600
+... finished 700
+... finished 800
+... finished 900
+... finished 1000
+... finished 1500
+... finished 2000
+... finished 2500
+... finished 3000
+... finished 3500
+... finished 4000
+... finished 4500
+... finished 5000
+... finished 6000
+... finished 7000
+... finished 8000
+... finished 9000
+... finished 10000
+... finished 15000
+... finished 20000
+... finished 25000
+... finished 30000
+... finished 35000
+... finished 40000
+... finished 45000
+... finished 50000
+... finished 60000
+... finished 70000
+... finished 80000
+... finished 90000
+... finished 100000
+... finished 150000
+... finished 200000
+... finished 250000
+... finished 300000
+... finished 350000
+... finished 400000
+... finished 450000
+... finished 500000
+... finished 600000
+... finished 700000
+... finished 800000
+... finished 900000
+... finished 1000000
+... finished 1100000
+... finished 1200000
+... finished 1300000
+... finished 1400000
+... finished 1500000
+... finished 1600000
+... finished 1700000
+... finished 1800000
+... finished 1900000
+... finished 2000000
+... finished 2100000
+... finished 2200000
+... finished 2300000
+... finished 2400000
+... finished 2500000
+... finished 2600000
+... finished 2700000
+... finished 2800000
+... finished 2900000
+... finished 3000000
+... finished 3100000
+... finished 3200000
+... finished 3300000
+... finished 3400000
+... finished 3500000
+... finished 3600000
+... finished 3700000
+... finished 3800000
+... finished 3900000
+... finished 4000000
+... finished 4100000
+... finished 4200000
+... finished 4300000
+... finished 4400000
+... finished 4500000
+... finished 4600000
+... finished 4700000
+... finished 4800000
+... finished 4900000
+... finished 5000000
+... finished 5100000
+... finished 5200000
+... finished 5300000
+... finished 5400000
+... finished 5500000
+... finished 5600000
+... finished 5700000
+... finished 5800000
+... finished 5900000
+... finished 6000000
+... finished 6100000
+... finished 6200000
+... finished 6300000
+... finished 6400000
+... finished 6500000
+... finished 6600000
+... finished 6700000
+... finished 6800000
+... finished 6900000
+... finished 7000000
+... finished 7100000
+... finished 7200000
+... finished 7300000
+... finished 7400000
+... finished 7500000
+... finished 7600000
+... finished 7700000
+... finished 7800000
+... finished 7900000
+... finished 8000000
+... finished 8100000
+... finished 8200000
+... finished 8300000
+... finished 8400000
+... finished 8500000
+... finished 8600000
+... finished 8700000
+... finished 8800000
+... finished 8900000
+... finished 9000000
+... finished 9100000
+... finished 9200000
+... finished 9300000
+... finished 9400000
+... finished 9500000
+... finished 9600000
+... finished 9700000
+... finished 9800000
+... finished 9900000
+... finished 10000000
+Keys:       16 bytes each
+Values:     1024 bytes each (512 bytes after compression)
+Entries:    10000000
+RawSize:    9918.2 MB (estimated)
+FileSize:   5035.4 MB (estimated)
+------------------------------------------------
+GC is triggered, vlog num: 1, count: 16903
+GC is triggered, vlog num: 2, count: 16386
+GC is triggered, vlog num: 3, count: 17394
+GC is triggered, vlog num: 1, count: 33992
+GC is triggered, vlog num: 2, count: 20193
+GC is triggered, vlog num: 4, count: 18152
+GC is triggered, vlog num: 9, count: 17425
+GC is triggered, vlog num: 2, count: 25925
+GC is triggered, vlog num: 3, count: 31417
+GC is triggered, vlog num: 4, count: 19901
+GC is triggered, vlog num: 9, count: 16230
+GC is triggered, vlog num: 10, count: 19622
+GC is triggered, vlog num: 11, count: 19374
+GC is triggered, vlog num: 4, count: 20521
+GC is triggered, vlog num: 12, count: 19756
+GC is triggered, vlog num: 9, count: 20375
+GC is triggered, vlog num: 10, count: 27480
+GC is triggered, vlog num: 5, count: 22603
+GC is triggered, vlog num: 11, count: 31320
+GC is triggered, vlog num: 12, count: 18755
+GC is triggered, vlog num: 6, count: 23284
+GC is triggered, vlog num: 7, count: 23253
+GC is triggered, vlog num: 33, count: 16044
+GC is triggered, vlog num: 8, count: 23795
+GC is triggered, vlog num: 34, count: 16629
+GC is triggered, vlog num: 33, count: 19965
+GC is triggered, vlog num: 5, count: 23597
+GC is triggered, vlog num: 6, count: 26598
+GC is triggered, vlog num: 35, count: 17490
+GC is triggered, vlog num: 7, count: 28340
+GC is triggered, vlog num: 8, count: 17156
+GC is triggered, vlog num: 13, count: 23866
+GC is triggered, vlog num: 14, count: 24211
+GC is triggered, vlog num: 15, count: 24579
+GC is triggered, vlog num: 34, count: 25542
+GC is triggered, vlog num: 35, count: 27291
+GC is triggered, vlog num: 13, count: 16544
+GC is triggered, vlog num: 16, count: 24658
+GC is triggered, vlog num: 36, count: 19582
+GC is triggered, vlog num: 17, count: 24617
+GC is triggered, vlog num: 14, count: 18216
+GC is triggered, vlog num: 36, count: 18080
+GC is triggered, vlog num: 15, count: 19078
+GC is triggered, vlog num: 41, count: 19353
+GC is triggered, vlog num: 42, count: 18974
+GC is triggered, vlog num: 18, count: 25396
+GC is triggered, vlog num: 43, count: 18878
+GC is triggered, vlog num: 19, count: 25719
+GC is triggered, vlog num: 44, count: 19362
+GC is triggered, vlog num: 20, count: 25870
+GC is triggered, vlog num: 41, count: 17171
+GC is triggered, vlog num: 25, count: 24537
+GC is triggered, vlog num: 42, count: 17364
+GC is triggered, vlog num: 26, count: 24120
+GC is triggered, vlog num: 37, count: 22028
+GC is triggered, vlog num: 27, count: 24439
+GC is triggered, vlog num: 28, count: 24115
+GC is triggered, vlog num: 38, count: 21689
+GC is triggered, vlog num: 39, count: 21598
+GC is triggered, vlog num: 21, count: 26031
+GC is triggered, vlog num: 22, count: 26074
+GC is triggered, vlog num: 40, count: 21352
+GC is triggered, vlog num: 45, count: 20351
+GC is triggered, vlog num: 23, count: 25777
+GC is triggered, vlog num: 24, count: 25497
+GC is triggered, vlog num: 46, count: 20039
+GC is triggered, vlog num: 29, count: 24670
+fillrandom   :       5.480 micros/op 182482 ops/sec 54.800 seconds 10000000 operations;  181.0 MB/s
+Microseconds per op:
+Count: 10000000  Average: 5.4800  StdDev: 18.42
+Min: 2.0000  Median: 3.7992  Max: 31833.0000
+Percentiles: P50: 3.80 P75: 6.54 P90: 12.80 P99: 24.60 P99.9: 42.51 P99.99: 103.74
+------------------------------------------------------
+
+flush到磁盘: 400MB,		 写入磁盘: 3057MB,		 写放大: 7.65 
+原始写入磁盘: 9918MB,		 新写入磁盘量： 9408MB,		 空间放大： 0.95 
+compaction time: 12392718
+compaction throughput = (read + write) / time = (2778.580177 + 2657.778865) / 12.392718 =  438.67 MB/s
+gc bytes read and write: 4788018048
+gc time: 31018222
+gc throughput: 147.21
+gc read and write time: 24404737 us
+gc computation time: 6613485 us
+data transfer time: 7712951 us
