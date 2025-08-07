@@ -1,45 +1,62 @@
 #!/usr/bin/env bash
+###############################################################################
+# gParaKV throughput benchmark (write: fillrandom, read: readrandom)
 #
-# gParaKV throughput benchmark
+# This script is **location–agnostic**: you can launch it from any directory.
+# Simply edit the tunable parameters below—or export them as environment
+# variables—before running.
 #
-# This script measures write throughput (fillrandom) and
-# read throughput (readrandom) using LevelDB’s db_bench.
-# All parameters that control data volume are exposed as variables
-# for easy tuning.
+# ────────────────────────────────────────────────────────────────────────────
+# ❶ Two binaries
+#    • gParaKV (no GC)      : /home/gParaKV/build/db_bench
+#    • gParaKV-GC (with GC) : /home/gParaKV-GC/build/db_bench  +  --gc=1
+#
+# ❷ Key facts
+#    • KEY_SIZE is fixed at 16 bytes in gParaKV.
+#    • Total data written ≈ ((VALUE_SIZE + KEY_SIZE) * NUM_KV) >> 30 GiB.
+#      Example: (1024 + 16) B × 100 000 000 ≈ 100 GiB.
+#
+# ❸ Throughput output (MB/s) appears in `fillrandom` and `readrandom` lines:
+#      fillrandom : … 218.6 MB/s
+#      readrandom : …  82.7 MB/s
+###############################################################################
 
 #############################
 # Tunable parameters
 #############################
-
-VALUE_SIZE=1024           # Size of each value in bytes
-KEY_SIZE=16               # Size of each key (fixed by gParaKV) in bytes
-NUM_KV=100000000          # Number of key/value pairs to generate
-DB_PATH="/tmp/test"       # Directory where SSTables will be written
+VALUE_SIZE=${VALUE_SIZE:-1024}       # Size of each value (bytes)
+KEY_SIZE=16                          # Fixed by gParaKV (bytes)
+NUM_KV=${NUM_KV:-100000000}          # Number of key/value pairs
+DB_PATH=${DB_PATH:-/tmp/test}        # SSTable directory
+OUT_FILE=${OUT_FILE:-1.txt}          # Where to save db_bench output
+ENABLE_GC=${ENABLE_GC:-0}            # 0 = no GC, 1 = trigger GC
 
 #############################
-# Derived metrics
+# Select binary and GC flag
 #############################
-# Approximate amount of data written:
-#   ((VALUE_SIZE + KEY_SIZE) * NUM_KV) >> 30  ≈ 100 GiB
-# Modify VALUE_SIZE or NUM_KV to change the data volume.
+if [[ "$ENABLE_GC" -eq 1 ]]; then
+  DB_BENCH_BIN="~/gParaKV-GC/build/db_bench"
+  GC_FLAG="--gc=1"      # Explicitly enable GC (default is 0)
+else
+  DB_BENCH_BIN="~/gParaKV/build/db_bench"
+  GC_FLAG="--gc=0"
+fi
+
+#############################
+# Derived metric (for your log)
+#############################
+TOTAL_GIB=$(( (VALUE_SIZE + KEY_SIZE) * NUM_KV >> 30 ))
+echo "≈${TOTAL_GIB} GiB of data will be written." | tee /dev/tty
 
 #############################
 # Run benchmark
 #############################
-
-./build/db_bench \
+"$DB_BENCH_BIN" \
   --benchmarks=fillrandom,readrandom \
-  --value_size="${VALUE_SIZE}" \
-  --num="${NUM_KV}" \
-  --db="${DB_PATH}" \
-  &> benchmark.txt          # Redirect all output to benchmark.txt
+  --value_size="$VALUE_SIZE" \
+  --num="$NUM_KV" \
+  --db="$DB_PATH" \
+  $GC_FLAG \
+  &> "$OUT_FILE"
 
-#############################
-# Expected output format
-#############################
-# After completion, db_bench prints throughput in MB/s, e.g.:
-#
-# fillrandom : 4.537 micros/op 220433 ops/sec … 218.6 MB/s
-# readrandom : 11.264 micros/op 88779  ops/sec …  82.7 MB/s
-#
-# The first line shows write throughput, the second shows read throughput.
+echo "Benchmark finished. Results saved to $OUT_FILE"
