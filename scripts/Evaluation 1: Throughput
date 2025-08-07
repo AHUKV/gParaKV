@@ -1,34 +1,45 @@
 #!/usr/bin/env bash
-###############################################################################
-# gParaKV Throughput Benchmark                                                #
-#                                                                             #
-# This script benchmarks gParaKV write throughput (fillrandom) and read       #
-# throughput (readrandom). Results are reported by RocksDB’s `db_bench` in    #
-# MB/s.                                                                       #
-#                                                                             #
-# PARAMETER MEANINGS                                                          #
-#   VALUE_SIZE : Value size in bytes.                                         #
-#   KEY_SIZE   : Key size in bytes (fixed at 16 B).                           #
-#   NUM_KV     : Number of key–value pairs to generate.                       #
-#   DB_PATH    : Directory where the database (SSTables) will be created.     #
-#                                                                             #
-# DATA-SET SIZE                                                               #
-#   Approximate bytes written ≈ ((VALUE_SIZE + KEY_SIZE) * NUM_KV) >> 30.     #
-#   With the defaults below, the load is ≈ 100 GiB.                           #
-#   Modify VALUE_SIZE or NUM_KV to scale the workload.                        #
-###############################################################################
+#
+# gParaKV throughput benchmark
+#
+# This script measures write throughput (fillrandom) and
+# read throughput (readrandom) using LevelDB’s db_bench.
+# All parameters that control data volume are exposed as variables
+# for easy tuning.
 
-# --- Configurable variables --------------------------------------------------
-VALUE_SIZE=1024          # bytes per value
-KEY_SIZE=16              # bytes per key (constant)
-NUM_KV=100000000         # total KV pairs
-DB_PATH="/tmp/test"      # target directory for SSTables
-OUT_FILE="benchmark.log" # file to capture stdout & stderr
-# --------------------------------------------------------------------------- #
+#############################
+# Tunable parameters
+#############################
+
+VALUE_SIZE=1024           # Size of each value in bytes
+KEY_SIZE=16               # Size of each key (fixed by gParaKV) in bytes
+NUM_KV=100000000          # Number of key/value pairs to generate
+DB_PATH="/tmp/test"       # Directory where SSTables will be written
+
+#############################
+# Derived metrics
+#############################
+# Approximate amount of data written:
+#   ((VALUE_SIZE + KEY_SIZE) * NUM_KV) >> 30  ≈ 100 GiB
+# Modify VALUE_SIZE or NUM_KV to change the data volume.
+
+#############################
+# Run benchmark
+#############################
 
 ./build/db_bench \
-    --benchmarks=fillrandom,readrandom \
-    --value_size="${VALUE_SIZE}" \
-    --num="${NUM_KV}" \
-    --db="${DB_PATH}" \
-    &> "${OUT_FILE}"
+  --benchmarks=fillrandom,readrandom \
+  --value_size="${VALUE_SIZE}" \
+  --num="${NUM_KV}" \
+  --db="${DB_PATH}" \
+  &> benchmark.txt          # Redirect all output to benchmark.txt
+
+#############################
+# Expected output format
+#############################
+# After completion, db_bench prints throughput in MB/s, e.g.:
+#
+# fillrandom : 4.537 micros/op 220433 ops/sec … 218.6 MB/s
+# readrandom : 11.264 micros/op 88779  ops/sec …  82.7 MB/s
+#
+# The first line shows write throughput, the second shows read throughput.
