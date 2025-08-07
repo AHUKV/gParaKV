@@ -7,8 +7,8 @@
 # MB/s.                                                                       #
 #                                                                             #
 # PARAMETER MEANINGS                                                          #
-#   VALUE_SIZE : Value size in **bytes**.                                      #
-#   KEY_SIZE   : Key size in **bytes** (fixed at 16 B).                        #
+#   VALUE_SIZE : Value size in bytes.                                         #
+#   KEY_SIZE   : Key size in bytes (fixed at 16 B).                           #
 #   NUM_KV     : Number of key–value pairs to generate.                       #
 #   DB_PATH    : Directory where the database (SSTables) will be created.     #
 #                                                                             #
