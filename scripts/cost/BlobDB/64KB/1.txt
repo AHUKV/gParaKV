@@ -1,114 +1,0 @@
-RocksDB:    version 9.8.4
-Date:       Thu Jan  9 21:43:11 2025
-CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
-CPUCache:   25600 KB
-... finished 1000 ops                              
-... finished 2000 ops                              
-... finished 3000 ops                              
-... finished 4000 ops                              
-... finished 5000 ops                              
-... finished 6000 ops                              
-... finished 7000 ops                              
-... finished 8000 ops                              
-... finished 9000 ops                              
-... finished 10000 ops                              
-... finished 11000 ops                              
-... finished 12000 ops                              
-... finished 13000 ops                              
-... finished 14000 ops                              
-... finished 15000 ops                              
-... finished 16000 ops                              
-... finished 17000 ops                              
-... finished 18000 ops                              
-... finished 19000 ops                              
-... finished 20000 ops                              
-... finished 21000 ops                              
-... finished 22000 ops                              
-... finished 23000 ops                              
-... finished 24000 ops                              
-... finished 25000 ops                              
-... finished 26000 ops                              
-... finished 30000 ops                              
-... finished 35000 ops                              
-... finished 40000 ops                              
-... finished 45000 ops                              
-... finished 50000 ops                              
-... finished 60000 ops                              
-... finished 70000 ops                              
-... finished 80000 ops                              
-... finished 90000 ops                              
-long op: 1399213 micros                              ... finished 100000 ops                              
-long op: 1314495 micros                              long op: 1686097 micros                              long op: 1588434 micros                              long op: 2224679 micros                              ... finished 150000 ops                              
-long op: 2444405 micros                              long op: 1301768 micros                              long op: 4206153 micros                              ... finished 200000 ops                              
-long op: 7643886 micros                              long op: 2899074 micros                              long op: 5812086 micros                              ... finished 250000 ops                              
-long op: 3518485 micros                              long op: 6893187 micros                              ... finished 300000 ops                              
-long op: 4741849 micros                              long op: 7003889 micros                              long op: 6726092 micros                              long op: 7224646 micros                              ... finished 350000 ops                              
-long op: 9241369 micros                              long op: 12246265 micros                              ... finished 400000 ops                              
-long op: 12496945 micros                              long op: 15146043 micros                              ... finished 450000 ops                              
-long op: 16488732 micros                              long op: 13498397 micros                              ... finished 500000 ops                              
-long op: 18760243 micros                              long op: 17232157 micros                              long op: 21241709 micros                              long op: 14158288 micros                              long op: 25458561 micros                              ... finished 600000 ops                              
-long op: 15433195 micros                              long op: 25129373 micros                              long op: 47659984 micros                              ... finished 700000 ops                              
-long op: 23057130 micros                              long op: 24813537 micros                              ... finished 800000 ops                              
-long op: 29331224 micros                              long op: 23662951 micros                              long op: 30169076 micros                              long op: 25455083 micros                              ... finished 900000 ops                              
-long op: 32296310 micros                              long op: 27345038 micros                              ... finished 1000000 ops                              
-long op: 34094559 micros                              long op: 27628202 micros                              long op: 1041690 micros                              long op: 38865051 micros                              long op: 1151501 micros                              ... finished 1100000 ops                              
-long op: 28033637 micros                              long op: 35643873 micros                              ... finished 1200000 ops                              
-long op: 31984876 micros                              long op: 38415618 micros                              ... finished 1300000 ops                              
-long op: 34157670 micros                              long op: 39967835 micros                              long op: 37903394 micros                              ... finished 1400000 ops                              
-long op: 42480348 micros                              long op: 48234294 micros                              ... finished 1500000 ops                              
-long op: 42432913 micros                              Set seed to 1736430184212526 because --seed was 0
-Initializing RocksDB Options from the specified file
-Initializing RocksDB Options from command-line flags
-Integrated BlobDB: blob cache disabled
-Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
-Values:     65536 bytes each (32768 bytes after compression)
-Entries:    1562500
-Prefix:    0 bytes
-Keys per prefix:    0
-RawSize:    97680.1 MB (estimated)
-FileSize:   48852.0 MB (estimated)
-Write rate: 0 bytes/second
-Read rate: 0 ops/second
-Compression: NoCompression
-Compression sampling rate: 0
-Memtablerep: SkipListFactory
-Perf Level: 1
-------------------------------------------------
-Initializing RocksDB Options from the specified file
-Initializing RocksDB Options from command-line flags
-Integrated BlobDB: blob cache disabled
-DB path: [/media/test]
-fillrandom   :     773.938 micros/op 1292 ops/sec 1208.891 seconds 1562000 operations;   80.8 MB/s
-Microseconds per write:
-Count: 1562 Average: 773934.6120  StdDev: 4357862.09
-Min: 82934  Median: 117939.9727  Max: 48234294
-Percentiles: P50: 117939.97 P75: 149904.50 P99: 29090769.23 P99.9: 46728000.00 P99.99: 48234294.00
-------------------------------------------------------
-(   75000,  110000 ]      684  43.790%  43.790% #########
-(  110000,  170000 ]      733  46.927%  90.717% #########
-(  170000,  250000 ]       83   5.314%  96.031% #
-(  250000,  380000 ]        4   0.256%  96.287% 
-(  380000,  570000 ]        3   0.192%  96.479% 
-(  860000, 1200000 ]        3   0.192%  96.671% 
-( 1200000, 1900000 ]        5   0.320%  96.991% 
-( 1900000, 2900000 ]        3   0.192%  97.183% 
-( 2900000, 4300000 ]        2   0.128%  97.311% 
-( 4300000, 6500000 ]        2   0.128%  97.439% 
-( 6500000, 9800000 ]        6   0.384%  97.823% 
-( 9800000, 14000000 ]        3   0.192%  98.015% 
-( 14000000, 22000000 ]        7   0.448%  98.464% 
-( 22000000, 33000000 ]       13   0.832%  99.296% 
-( 33000000, 49000000 ]       11   0.704% 100.000% 
-
-flush到磁盘: 50MB,		 写入磁盘: 980MB,		 写放大: 19.51 
-原始写入磁盘: 97649MB,		 新写入磁盘量： 156240MB,		 空间放大： 1.60 
-compaction time: 1106004306 us
-compaction throughput = (read + write) / time = (949.418138 + 929.986980) / 1106.004306 =  1.70 MB/s
-reading time: 87963 us
-writing time: 2202718 us
-merge-sorting time: 1103713625 us
-gc bytes read and write: 934433124160
-gc time: 1053634530
-gc throughput: 845.78
-gc read and write time: 1143891450 us
-gc computation time: 18446744073619294696 us

@@ -1,301 +1,0 @@
-init env threadpool
-write_buffer_size:64 MB
-max_file_size:2 MB
-block_size:4 KB
-max_open_files:10000 
-LevelDB:    version 1.20
-Date:       Sun Jan 12 17:57:43 2025
-CPU:        40 * Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
-CPUCache:   25600 KB
-Keys:       16 bytes each
-Values:     65536 bytes each (65536 bytes after compression)
-Entries:    1562500
-RawSize:    97680.1 MB (estimated)
-FileSize:   97680.1 MB (estimated)
-WARNING: Optimization is disabled: benchmarks unnecessarily slow
-WARNING: Assertions are enabled; benchmarks unnecessarily slow
-------------------------------------------------
-before Open in run
-after rebuildTree,totalPartitions,:2,NewestPartition:1
-min_log:0,partition:0
-prev_log:0,partition:0
-min_log:0,partition:1
-prev_log:0,partition:1
-filenames size:32,partition:0
-before RecoverLogFile,log.size:0
-before initFileMetadataAndprefetchPinterFile
-after initFileMetadataAndprefetchPinterFile
-partition:0,new_log_number:3
-partition:1,new_log_number:4
-SSTableID:3129
-SSTableID:3387
-after recoveryHashTable
-recoveryIndexTime:3044817.000000
-recoveryTime:3047710.000000
-after rebuildTree,totalPartitions,:2,NewestPartition:1
-min_log:0,partition:0
-prev_log:0,partition:0
-min_log:0,partition:1
-prev_log:0,partition:1
-filenames size:32,partition:0
-before RecoverLogFile,log.size:0
-before initFileMetadataAndprefetchPinterFile
-after initFileMetadataAndprefetchPinterFile
-partition:0,new_log_number:3
-partition:1,new_log_number:4
-SSTableID:3129
-SSTableID:3387
-after recoveryHashTable
-recoveryIndexTime:3410701.000000
-recoveryTime:3412879.000000
-LogPrefixName:/media/test/logfile-
-indexCharKey:0000000051989072
-leaf node,partition:0
-leaf node,partition:1
-before initFileMetadataAndprefetchPinterFile
-after initFileMetadataAndprefetchPinterFile
-partition:0, pfiles_ size:0
-partition:0, fileMetaVec size:0
-partition:1, pfiles_ size:0
-partition:1, fileMetaVec size:0
-recoveryIndexTime:3044817.000000
-NewestPartition:1
-P:0, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:895.000000,totalMergeTime:0.000000
-P:1, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:721.000000,totalMergeTime:0.000000
-P:0, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
-P:1, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
-totalCostGetLn:0.000000
-Get in Memtable:0,IMemtable:0
-LogPrefixName:/media/test/logfile-
-indexCharKey:0000000051989072
-leaf node,partition:0
-leaf node,partition:1
-before initFileMetadataAndprefetchPinterFile
-after initFileMetadataAndprefetchPinterFile
-partition:0, pfiles_ size:0
-partition:0, fileMetaVec size:0
-partition:1, pfiles_ size:0
-partition:1, fileMetaVec size:0
-recoveryIndexTime:3410701.000000
-before RunBenchmark
-... finished 100 ops                              ... finished 200 ops                              ... finished 300 ops                              ... finished 400 ops                              ... finished 500 ops                              ... finished 600 ops                              ... finished 700 ops                              ... finished 800 ops                              ... finished 900 ops                              ... finished 1000 ops                              ... finished 1500 ops                              ... finished 2000 ops                              ... finished 2500 ops                              ... finished 3000 ops                              ... finished 3500 ops                              ... finished 4000 ops                              ... finished 4500 ops                              ... finished 5000 ops                              ... finished 6000 ops                              ... finished 7000 ops                              ... finished 8000 ops                              ... finished 9000 ops                              ... finished 10000 ops                              ... finished 15000 ops                              ... finished 20000 ops                              ... finished 25000 ops                              ... finished 30000 ops                              ... finished 35000 ops                              ... finished 40000 ops                              ... finished 45000 ops                              ... finished 50000 ops                              ... finished 60000 ops                              ... finished 70000 ops                              ... finished 80000 ops                              ... finished 90000 ops                              ... finished 100000 ops                              ... finished 150000 ops                              ... finished 200000 ops                              ... finished 250000 ops                              ... finished 300000 ops                              ... finished 350000 ops                              ... finished 400000 ops                              ... finished 450000 ops                              ... finished 500000 ops                              splitLimit:43999672960, curPartitionSize:4433304246,continueFlushBytes:4433304246, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:0,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:0,L2:0
-Compacting 66@0 +0@1 + files in partition=0
--two Compacting 66@0 +0@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:77 ,L1:0,L2:0
-merge time:6564997.000000,totalReadTime:866157.000000,totalSortTime:12240.000000,totalWriteTime:5652620.000000,totalUpHashTime:13.000000,inPutItearTime:265.000000,otherTime:10958.000000
-splitLimit:43999672960, curPartitionSize:4480167936,continueFlushBytes:8866607573, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:1,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:1,L2:1
-Compacting 66@0 +1@1 + files in partition=0
--two Compacting 66@0 +1@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:78 ,L1:1,L2:1
-merge time:6843750.000000,totalReadTime:878970.000000,totalSortTime:22057.000000,totalWriteTime:5876894.000000,totalUpHashTime:10.000000,inPutItearTime:124.000000,otherTime:23169.000000
-splitLimit:43999672960, curPartitionSize:4523319808,continueFlushBytes:13299912417, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
-Compacting 66@0 +2@1 + files in partition=0
--two Compacting 66@0 +2@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:78 ,L1:2,L2:2
-merge time:6792774.000000,totalReadTime:976984.000000,totalSortTime:27202.000000,totalWriteTime:5704534.000000,totalUpHashTime:15.000000,inPutItearTime:125.000000,otherTime:30143.000000
-splitLimit:43999672960, curPartitionSize:4564007936,continueFlushBytes:17733217065, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:2,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:2,L2:2
-Compacting 66@0 +2@1 + files in partition=0
--two Compacting 66@0 +2@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:75 ,L1:2,L2:2
-merge time:6749461.000000,totalReadTime:908916.000000,totalSortTime:27484.000000,totalWriteTime:5731283.000000,totalUpHashTime:21.000000,inPutItearTime:163.000000,otherTime:28814.000000
-splitLimit:43999672960, curPartitionSize:4603509760,continueFlushBytes:22166521899, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
-Compacting 66@0 +3@1 + files in partition=0
--two Compacting 66@0 +3@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:78 ,L1:3,L2:3
-merge time:6722148.000000,totalReadTime:1124891.000000,totalSortTime:38064.000000,totalWriteTime:5439947.000000,totalUpHashTime:11.000000,inPutItearTime:173.000000,otherTime:39932.000000
-splitLimit:43999672960, curPartitionSize:4641177088,continueFlushBytes:26599825840, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
-Compacting 66@0 +3@1 + files in partition=0
--two Compacting 66@0 +3@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:78 ,L1:3,L2:3
-merge time:7038442.000000,totalReadTime:1181623.000000,totalSortTime:40935.000000,totalWriteTime:5687134.000000,totalUpHashTime:13.000000,inPutItearTime:120.000000,otherTime:43040.000000
-splitLimit:43999672960, curPartitionSize:4677864448,continueFlushBytes:31033129145, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:3,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:3,L2:3
-Compacting 66@0 +3@1 + files in partition=0
--two Compacting 66@0 +3@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:79 ,L1:3,L2:3
-merge time:7162228.000000,totalReadTime:1127820.000000,totalSortTime:41387.000000,totalWriteTime:5868450.000000,totalUpHashTime:13.000000,inPutItearTime:180.000000,otherTime:41813.000000
-splitLimit:43999672960, curPartitionSize:4712860160,continueFlu... finished 600000 ops                              ... finished 700000 ops                              ... finished 800000 ops                              ... finished 900000 ops                              ... finished 1000000 ops                              shBytes:35466433761, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
-Compacting 66@0 +4@1 + files in partition=0
--two Compacting 66@0 +4@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:78 ,L1:4,L2:4
-merge time:7555230.000000,totalReadTime:1346962.000000,totalSortTime:49252.000000,totalWriteTime:6001702.000000,totalUpHashTime:12.000000,inPutItearTime:197.000000,otherTime:53672.000000
-splitLimit:43999672960, curPartitionSize:4746102272,continueFlushBytes:39899737773, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:4,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:4,L2:4
-Compacting 66@0 +4@1 + files in partition=0
--two Compacting 66@0 +4@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:79 ,L1:4,L2:4
-merge time:8609466.000000,totalReadTime:1533075.000000,totalSortTime:58619.000000,totalWriteTime:6831332.000000,totalUpHashTime:11.000000,inPutItearTime:124.000000,otherTime:62562.000000
-splitLimit:43999672960, curPartitionSize:4778596352,continueFlushBytes:44333041150, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:5,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:5,L2:5
-Compacting 66@0 +5@1 + files in partition=0
--two Compacting 66@0 +5@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:80 ,L1:5,L2:5
-merge time:7760568.000000,totalReadTime:1605822.000000,totalSortTime:63251.000000,totalWriteTime:5892050.000000,totalUpHashTime:10.000000,inPutItearTime:145.000000,otherTime:66409.000000
-splitLimit:43999672960, curPartitionSize:4810392576,continueFlushBytes:48766344844, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:5,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:5,L2:5
-Compacting 66@0 +5@1 + files in partition=0
--two Compacting 66@0 +5@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:80 ,L1:5,L2:5
-merge time:7649997.000000,totalReadTime:1671477.000000,totalSortTime:67150.000000,totalWriteTime:5698935.000000,totalUpHashTime:26.000000,inPutItearTime:127.000000,otherTime:70439.000000
-splitLimit:43999672960, curPartitionSize:4845249536,continueFlushBytes:53199649149, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:5,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:5,L2:5
-Compacting 66@0 +5@1 + files in partition=0
--two Compacting 66@0 +5@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:80 ,L1:5,L2:5
-merge time:8187564.000000,totalReadTime:1820827.000000,totalSortTime:74077.000000,totalWriteTime:6060734.000000,totalUpHashTime:11.000000,inPutItearTime:119.000000,otherTime:76845.000000
-splitLimit:43999672960, curPartitionSize:4877543424,continueFlushBytes:57632952866, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:6,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:6,L2:6
-Compacting 66@0 +6@1 + files in partition=0
--two Compacting 66@0 +6@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:79 ,L1:6,L2:6
-merge time:8829668.000000,totalReadTime:1851429.000000,totalSortTime:76575.000000,totalWriteTime:6661513.000000,totalUpHashTime:10.000000,inPutItearTime:129.000000,otherTime:79702.000000
-splitLimit:43999672960, curPartitionSize:4908604928,continueFlushBytes:62066256890, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:6,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:6,L2:6
-Compacting 66@0 +6@1 + files in partition=0
--two Compacting 66@0 +6@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:79 ,L1:6,L2:6
-merge time:8644064.000000,totalReadTime:1905466.000000,totalSortTime:79696.000000,totalWriteTime:6410709.000000,totalUpHashTime:11.000000,inPutItearTime:119.000000,otherTime:81823.000000
-splitLimit:43999672960, curPartitionSize:4937871360,continueFlushBytes:66499560798, continueSplitCounts:0
-in PickAllComp... finished 1100000 ops                              ... finished 1200000 ops                              ... finished 1300000 ops                              ... finished 1400000 ops                              action, partition:0,L0 size:66,L1 size:7,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:7,L2:7
-Compacting 66@0 +7@1 + files in partition=0
--two Compacting 66@0 +7@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:81 ,L1:7,L2:7
-merge time:8299891.000000,totalReadTime:1989187.000000,totalSortTime:83396.000000,totalWriteTime:5963756.000000,totalUpHashTime:10.000000,inPutItearTime:119.000000,otherTime:87971.000000
-splitLimit:43999672960, curPartitionSize:4964933120,continueFlushBytes:70932865518, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:7,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:7,L2:7
-Compacting 66@0 +7@1 + files in partition=0
--two Compacting 66@0 +7@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:81 ,L1:7,L2:7
-merge time:8570765.000000,totalReadTime:2063796.000000,totalSortTime:85988.000000,totalWriteTime:6144689.000000,totalUpHashTime:11.000000,inPutItearTime:105.000000,otherTime:91015.000000
-splitLimit:43999672960, curPartitionSize:4990204416,continueFlushBytes:75366168207, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:7,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:7,L2:7
-Compacting 66@0 +7@1 + files in partition=0
--two Compacting 66@0 +7@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:81 ,L1:7,L2:7
-merge time:8678386.000000,totalReadTime:2101947.000000,totalSortTime:92934.000000,totalWriteTime:6199756.000000,totalUpHashTime:10.000000,inPutItearTime:155.000000,otherTime:93769.000000
-splitLimit:43999672960, curPartitionSize:5015341568,continueFlushBytes:79799472506, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:8,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:8,L2:8
-Compacting 66@0 +8@1 + files in partition=0
--two Compacting 66@0 +8@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:80 ,L1:8,L2:8
-merge time:9262401.000000,totalReadTime:2161109.000000,totalSortTime:94218.000000,totalWriteTime:6712911.000000,totalUpHashTime:11.000000,inPutItearTime:101.000000,otherTime:96690.000000
-splitLimit:43999672960, curPartitionSize:5039001600,continueFlushBytes:84232777266, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:8,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:8,L2:8
-Compacting 66@0 +8@1 + files in partition=0
--two Compacting 66@0 +8@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:81 ,L1:8,L2:8
-merge time:9747706.000000,totalReadTime:2238716.000000,totalSortTime:94671.000000,totalWriteTime:7109549.000000,totalUpHashTime:13.000000,inPutItearTime:133.000000,otherTime:101213.000000
-splitLimit:43999672960, curPartitionSize:5062089728,continueFlushBytes:88666081345, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:8,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:8,L2:8
-Compacting 66@0 +8@1 + files in partition=0
--two Compacting 66@0 +8@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:82 ,L1:8,L2:8
-merge time:8807185.000000,totalReadTime:2210059.000000,totalSortTime:95611.000000,totalWriteTime:6197857.000000,totalUpHashTime:11.000000,inPutItearTime:158.000000,otherTime:98869.000000
-splitLimit:43999672960, curPartitionSize:5084311552,continueFlushBytes:93099385432, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:8,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:8,L2:8
-Compacting 66@0 +8@1 + files in partition=0
--two Compacting 66@0 +8@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:82 ,L1:8,L2:8
-merge time:8901706.000000,totalReadTime:2238757.000000,totalSortTime:97274.000000,totalWriteTime:6257183.000000,totalUpHashTime:10.000000,inPutItearTime:141.000000,otherTime:100728.000000
-splitLimit:43999672960, curPartitionSize:5106492416,continueFlushBytes:97532690123, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:9,L2:0
-before Do... finished 1500000 ops                              CompactionWork NumFiles L0:66 ,L1:9,L2:9
-Compacting 66@0 +9@1 + files in partition=0
--two Compacting 66@0 +9@1 + files in partition=0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:83 ,L1:9,L2:9
-merge time:8929530.000000,totalReadTime:2184702.000000,totalSortTime:95353.000000,totalWriteTime:6343175.000000,totalUpHashTime:8.000000,inPutItearTime:170.000000,otherTime:100459.000000
-splitLimit:43999672960, curPartitionSize:5130952192,continueFlushBytes:101965994567, continueSplitCounts:0
-in PickAllCompaction, partition:0,L0 size:66,L1 size:9,L2:0
-before DoCompactionWork NumFiles L0:66 ,L1:9,L2:9
-Compacting 66@0 +9@1 + files in partition=0
--two Compacting 66@0 +9@1 + files in partition=0
-fillrandom   :     561.577 micros/op;  111.3 MB/s;   1780.698 op/s
-compaction time: 177691377 us
-compaction throughput = (read + write) / time = (93216.257562 + 218.862100) / 177.691377 =  525.83 MB/s
-gc bytes read and write: 0
-gc time: 0
-gc throughput: -nan
-gc read and write time: 0 us
-gc computation time: 0 us
-writeDataSize:    102436193507
-writeDataSizeActual:    199828444436
-
-                               Compactions
-Partition  Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
---------------------------------------------------
-  0       0       73 4676.345   418.393 93014.422 97690.767
-  0       1        9   17.026   177.691  201.836 91163.425
---------------------------------------------------
---------------------------------------------------
-
-approximate-memory-usage: 
-59039424
-readDataSize:    0
-readDataSizeActual:    0
-db_->tableCacheNum:    0
-db_->blockCacheNum:    0
- db_->readIn0:    0
- db_->readIn1:    0
- db_->readMem:    0
- db_->readImm:    0
- db_->LevelRead:    0
-compact->compaction->level():0
-after AddInputDeletions NumFiles L0:73 ,L1:9,L2:9
-merge time:8836902.000000,totalReadTime:2345455.000000,totalSortTime:102671.000000,totalWriteTime:6064520.000000,totalUpHashTime:10.000000,inPutItearTime:153.000000,otherTime:104739.000000
-NewestPartition:1
-P:0, totalLogTime:318457604.000000,totalMemTableTime:27138115.000000,totalFlushTime:498927811.000000,totalMergeTime:212878926.000000
-P:1, totalLogTime:0.000000,totalMemTableTime:0.000000,totalFlushTime:16723.000000,totalMergeTime:0.000000
-P:0, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
-P:1, totalReadMem:0.000000,totalReadL0:0.000000,totalReadLn:0.000000,totalReadLockTime:0.000000,totalReadOther:0.000000
-totalCostGetLn:0.000000
-Get in Memtable:0,IMemtable:0
