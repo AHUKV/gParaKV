@@ -17,8 +17,8 @@
 #      Example: (1024 + 16) B × 100 000 000 ≈ 100 GiB.
 #
 # ❸ Throughput output (MB/s) appears in `fillrandom` and `readrandom` lines:
-#      fillrandom : … 218.6 MB/s
-#      readrandom : …  82.7 MB/s
+#      fillrandom : … 200 MB/s
+#      readrandom : …  100 MB/s
 ###############################################################################
 
 #############################
