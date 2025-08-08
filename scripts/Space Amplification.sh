@@ -43,47 +43,20 @@ else
 fi
 
 #############################
-# Prep & derived metrics
+# Derived metric (for your log)
 #############################
-set -e
-ulimit -n 999999
-
-# Clean DB_PATH for a fresh measurement
-rm -rf "$DB_PATH"
-mkdir -p "$DB_PATH"
-
-LOGICAL_BYTES=$(( (VALUE_SIZE + KEY_SIZE) * NUM_KV ))
-LOGICAL_GIB=$(awk -v b="$LOGICAL_BYTES" 'BEGIN{printf "%.2f", b/1024/1024/1024}')
-
-echo "≈${LOGICAL_GIB} GiB of logical data will be written." | tee /dev/tty
-echo "Binary     : $DB_BENCH_BIN" | tee /dev/tty
-echo "GC flag    : $GC_FLAG"      | tee /dev/tty
-echo "DB path    : $DB_PATH"      | tee /dev/tty
-echo "Output file: $OUT_FILE"     | tee /dev/tty
-echo "──────────────────────────────────────────────" | tee /dev/tty
+TOTAL_GIB=$(( (VALUE_SIZE + KEY_SIZE) * NUM_KV >> 30 ))
+echo "≈${TOTAL_GIB} GiB of data will be written." | tee /dev/tty
 
 #############################
-# Run benchmark (write only)
+# Run benchmark
 #############################
 "$DB_BENCH_BIN" \
-  --benchmarks=fillrandom \
+  --benchmarks=fillrandom,readrandom \
   --value_size="$VALUE_SIZE" \
   --num="$NUM_KV" \
   --db="$DB_PATH" \
   $GC_FLAG \
   &> "$OUT_FILE"
 
-#############################
-# Measure on-disk size & SA
-#############################
-ONDISK_BYTES=$(du -sb "$DB_PATH" | awk '{print $1}')
-ONDISK_GIB=$(awk -v b="$ONDISK_BYTES" 'BEGIN{printf "%.2f", b/1024/1024/1024}')
-
-# Compute Space Amplification = OnDisk / Logical
-SPACE_AMP=$(awk -v d="$ONDISK_BYTES" -v l="$LOGICAL_BYTES" 'BEGIN{printf "%.4f", (l>0? d/l : 0)}')
-
-SUMMARY="Space amplification summary: logical=${LOGICAL_GIB} GiB, on-disk=${ONDISK_GIB} GiB, SpaceAmp=${SPACE_AMP}x"
-echo "$SUMMARY" | tee /dev/tty
-echo "$SUMMARY" >> "$OUT_FILE"
-
-echo "Done. Results saved to $OUT_FILE"
+echo "Benchmark finished. Results saved to $OUT_FILE"
