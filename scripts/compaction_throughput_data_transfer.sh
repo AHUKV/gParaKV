@@ -20,7 +20,7 @@
 #  USAGE EXAMPLES
 #
 #   # 100 GiB workload, no GC
-#   ./bench_compaction.sh
+#   ./compaction_throughput_data_transfer.sh
 #
 #   # 50 GiB workload, GC enabled, custom paths
 #   VALUE_SIZE=4096 NUM_KV=12500000 ENABLE_GC=1 \
