@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.9)
 # Keep the version below in sync with the one in db.h
 project(leveldb VERSION 1.23.0 LANGUAGES C CXX CUDA)
 
-set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_CUDA_FLAGS "${CMAKE._CUDA_FLAGS} -O3 -use_fast_math -lineinfo")
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -O3 -use_fast_math -lineinfo")
 
 # C standard can be overridden when this is used as a sub-project.
 if(NOT CMAKE_C_STANDARD)
@@ -126,7 +126,6 @@ add_library(leveldb ""
         db/my_stats.cc
         db/garbage_collector.cc
         db/rate_limiter.cc
-        db/rate_limiter.h
 )
 target_sources(leveldb
   PRIVATE
@@ -508,16 +507,7 @@ endif(LEVELDB_INSTALL)
 # Enable exceptions globally for C++ files
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
 
-find_package(CUDA REQUIRED)
 include_directories(${CUDA_INCLUDE_DIRS})
-
-# 设置库路径和头文件路径
-#set(CUFILE_PATH "/usr/local/cuda/targets/x86_64-linux/lib/")
-#set(CUFILE_INCLUDE_PATH "/usr/local/cuda/targets/x86_64-linux/include/")
-
-# 找到 cuFile 库
-#find_library(CUFILE_LIBRARY cufile HINTS ${CUFILE_PATH})
-#find_library(CUFILE_LIBRARY_STATIC cufile_static HINTS ${CUFILE_PATH})
 
 add_library(leveldb_cuda
         db/cuda/gpu_sort.cu
@@ -528,14 +518,6 @@ add_library(leveldb_cuda
         db/cuda/gpu_decoder.cu
         db/gpu_gc.cu
 )
-
-# 指定头文件的搜索路径
-#target_include_directories(leveldb_cuda PRIVATE ${CUFILE_INCLUDE_PATH})
-
-# 链接库
-#target_link_libraries(leveldb_cuda
-#        ${CUFILE_LIBRARY}
-#        ${CUFILE_LIBRARY_STATIC})
 
 # 创建接口库
 add_library(gpu_leveldb INTERFACE)
@@ -562,49 +544,13 @@ target_include_directories(ycsbc PRIVATE
 # 链接ycsb-c所需的库（包括rocksdb库）
 target_link_libraries(ycsbc gpu_leveldb)
 
-set_target_properties(leveldb_cuda ycsbc PROPERTIES
+set_target_properties(leveldb_cuda db_bench ycsbc PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
         CXX_EXTENSIONS OFF
         CUDA_STANDARD_REQUIRED ON
         CUDA_EXTENSIONS OFF
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
-        CUDA_ARCHITECTURES "60;70;80;90"
+        CUDA_ARCHITECTURES "60"
         CUDA PROPERTIES CUDA_SEPARABLE_COMPILATION ON
 )
-
-# 查找PMDK库
-#find_package(PkgConfig REQUIRED)
-#pkg_check_modules(PMDK REQUIRED libpmemobj)
-
-# 包含PMDK头文件路径
-#include_directories(${PMDK_INCLUDE_DIRS})
-
-# 添加PMDK库
-#if(PMDK_FOUND)
-#  message(STATUS "PMDK found")
-#  link_libraries(${PMDK_LIBRARIES})
-#else()
-#  message(FATAL_ERROR "PMDK not found")
-#endif()
-
-# 添加新的 PMDK 相关源文件
-#add_library(pmem_hashmap
-#        db/pmem_hashmap.h
-#        db/pmem_hashmap.cc
-#)
-
-#target_include_directories(pmem_hashmap
-#        PRIVATE
-#        ${PMDK_INCLUDE_DIRS}
-#)
-
-#target_link_libraries(pmem_hashmap
-#        PRIVATE
-#        ${PMDK_LIBRARIES}
-#)
-
-# 修改现有目标链接PMDK库（例如leveldb和ycsbc）
-#target_link_libraries(leveldb_cuda leveldb gmock gtest benchmark ${PMDK_LIBRARIES} pmem_hashmap)
-
-#target_link_libraries(ycsbc ${PMDK_LIBRARIES} pmem_hashmap)

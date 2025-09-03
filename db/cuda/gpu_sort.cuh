@@ -5,7 +5,6 @@
 #pragma once
 
 #include "db/gpu_gc.h"
-#include <crt/host_defines.h>
 #include <cstdint>
 #include <cstring>
 #include <string>
