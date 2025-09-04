@@ -34,7 +34,6 @@ class MyStats {
   uint32_t var_key_value_size;
 
   uint32_t clean_threshold;
-  uint32_t migrate_threshold;
   uint32_t max_num_log_item;
   uint32_t max_num_log;
   uint64_t max_vlog_size;
@@ -45,7 +44,6 @@ class MyStats {
         original_value_size(0),
         var_key_value_size(0),
         clean_threshold(0),
-        migrate_threshold(0),
         max_num_log_item(0),
         max_num_log(0),
         max_vlog_size(0) {}

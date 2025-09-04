@@ -276,7 +276,7 @@ int main(const int argc, const char *argv[]) {
                                          encoded_original_value_size;
 
   size_t num = std::stoul(props.GetProperty("recordcount"));
-  uint32_t vlog_size_tmp = 32 << 20;
+  uint32_t vlog_size_tmp = 64 << 20;
   uint32_t log_item_size = 12 + leveldb::my_stats.var_key_value_size;  // 1056
   uint32_t max_num_log_item =
       ((vlog_size_tmp / log_item_size + 100) / 100) * 100;
