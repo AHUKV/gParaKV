@@ -179,12 +179,6 @@ class DBImpl : public DB {
   static void BGGarbageCollection(void* db);
   void BackgroundGarbageCollection();
 
-  void MaybeScheduleMigration();
-  static void BGMigration(void* db);
-  void BackgroundMigration();
-
-  void BuildHotTableHelper(std::vector<GPUKeyValue>& iter, int level);
-
   Status WriteValid(char* output, uint32_t num_valid);
 
   Status MyWrite(WriteBatch* updates);

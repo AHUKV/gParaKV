@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.9)
 # Keep the version below in sync with the one in db.h
 project(leveldb VERSION 1.23.0 LANGUAGES C CXX CUDA)
 
-set(CMAKE_BUILD_TYPE Release)
-set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -O3 -use_fast_math -lineinfo")
+#set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -O3 -use_fast_math -lineinfo")
 
 # C standard can be overridden when this is used as a sub-project.
 if(NOT CMAKE_C_STANDARD)

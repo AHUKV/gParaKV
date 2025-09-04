@@ -157,7 +157,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname)
       vlog_(nullptr),
       vlogfile_(nullptr),
       vlog_head_(0),
-      vlog_manager_(my_stats.clean_threshold, my_stats.migrate_threshold) {}
+      vlog_manager_(my_stats.clean_threshold) {}
 
 DBImpl::DBImpl(const Options& raw_options, const std::string& dbname,
                std::string vlog_name)
@@ -189,7 +189,7 @@ DBImpl::DBImpl(const Options& raw_options, const std::string& dbname,
       vlog_(nullptr),
       vlogfile_(nullptr),
       vlog_head_(0),
-      vlog_manager_(my_stats.clean_threshold, my_stats.migrate_threshold) {}
+      vlog_manager_(my_stats.clean_threshold) {}
 
 DBImpl::~DBImpl() {
   // Wait for background work to finish.
@@ -1921,71 +1921,6 @@ void DBImpl::BackgroundGarbageCollection() {
   if (shutting_down_.load(std::memory_order_acquire))
     background_work_finished_signal_.SignalAll();
   mutex_.Unlock();
-}
-
-void DBImpl::MaybeScheduleMigration() {
-  if (vlog_manager_.IsMigration()) {
-    BackgroundMigration();
-  }
-
-  /*mutex_.AssertHeld();
-  if (background_migrate_scheduled_ ||
-      shutting_down_.load(std::memory_order_acquire) || !bg_error_.ok()) {
-  } else if (vlog_manager_.IsMigration()) {
-    background_migrate_scheduled_ = true;
-    env_->StartThread(&DBImpl::BGMigration, this);
-  }*/
-}
-
-void DBImpl::BGMigration(void* db) {
-  reinterpret_cast<DBImpl*>(db)->BackgroundMigration();
-}
-
-void DBImpl::BackgroundMigration() {
-  mutex_.Unlock();
-  std::pair<uint64_t, std::vector<uint32_t>*> keyValueInfo =
-      vlog_manager_.GetVlogToMigrate();
-  uint32_t vlog_number = keyValueInfo.first;
-
-  std::vector<uint32_t> keyValuesPos = *keyValueInfo.second;
-  size_t pos_size = keyValuesPos.size();
-  GPUPositionSort(keyValuesPos.data(), pos_size);
-  keyValuesPos.resize(pos_size);
-
-  size_t file_size;
-  SequentialFile* seq_file;
-  std::string vlog_filename = VLogFileName(vlog_name_, vlog_number);
-  env_->GetFileSize(vlog_filename, &file_size);
-  env_->NewSequentialFile(vlog_filename, &seq_file);
-
-  std::unique_ptr<char[]> buf(new char[file_size]);
-  Slice result;
-  seq_file->Read(file_size, &result, buf.get());
-
-  //  GarbageCollector::BeginMigration(result, hot_key_value, keyValuesPos);
-
-  mutex_.Lock();
-
-  vlog_manager_.RemoveMigration(vlog_number);
-
-  /*mutex_.Lock();
-  background_migrate_scheduled_ = false;
-  if (shutting_down_.load(std::memory_order_acquire))
-    background_work_finished_signal_.SignalAll();
-  mutex_.Unlock();*/
-}
-
-void DBImpl::BuildHotTableHelper(std::vector<GPUKeyValue>& iter, int level) {
-  FileMetaData meta;
-  meta.number = versions_->NewFileNumber();
-
-  BuildHotTable(dbname_, env_, options_, table_cache_, iter, &meta);
-
-  VersionEdit edit;
-  edit.AddFile(level, meta.number, meta.file_size, meta.smallest, meta.largest,
-               meta.num_data_blocks, meta.num_entries);
-
-  versions_->LogAndApply(&edit, &mutex_);
 }
 
 Status DBImpl::WriteValid(char* output, uint32_t num_valid) {
