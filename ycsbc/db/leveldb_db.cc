@@ -94,7 +94,6 @@ int LevelDB::Update(const string& table, const string& key,
 }
 
 void LevelDB::PrintMyStats() {
-  if (not_found_) std::cerr << "read not found: " << not_found_ << std::endl;
 }
 
 LevelDB::~LevelDB() { delete db_; }
