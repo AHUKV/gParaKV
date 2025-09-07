@@ -31,10 +31,10 @@ DB_PATH=${DB_PATH:-/tmp/test}        # SSTable directory
 # Binary & flag selection
 ##########################
 if [[ "$ENABLE_GC" -eq 1 ]]; then
-  DB_BENCH_BIN="/home/gParaKV-GC/build/db_bench"
+  DB_BENCH_BIN="$HOME/gParaKV-GC/build/db_bench"
   GC_FLAG="--gc=1"
 else
-  DB_BENCH_BIN="/home/gParaKV/build/db_bench"
+  DB_BENCH_BIN="$HOME/gParaKV/build/db_bench"
   GC_FLAG="--gc=0"                   # explicit, though default
 fi
 
