@@ -2,9 +2,6 @@
 # Continuously logs DRAM usage, per-process CPU utilisation,
 # and package-level power (Intel RAPL) to cpu.log every second.
 
-# Install sysstat system performance monitoring tools (contains pidstat and other necessary utilities)
-sudo apt-get install -y sysstat
-
 CPU0_ENERGY=$(cat /sys/class/powercap/intel-rapl:0/energy_uj)
 CPU1_ENERGY=$(cat /sys/class/powercap/intel-rapl:1/energy_uj)
 LAST_ENERGY_VALUE=$((CPU0_ENERGY + CPU1_ENERGY))
