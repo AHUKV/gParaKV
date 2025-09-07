@@ -42,10 +42,10 @@ ENABLE_GC=${ENABLE_GC:-0}             # 0 = gParaKV   |  1 = gParaKV-GC (GC)
 # Select binary and GC flag
 #############################
 if [[ "$ENABLE_GC" -eq 1 ]]; then
-  DB_BENCH_BIN="~/gParaKV-GC/build/db_bench"
+  DB_BENCH_BIN="$HOME/gParaKV-GC/build/db_bench"
   GC_FLAG="--gc=1"                    # enable GC
 else
-  DB_BENCH_BIN="~/gParaKV/build/db_bench"
+  DB_BENCH_BIN="$HOME/gParaKV/build/db_bench"
   GC_FLAG="--gc=0"                    # explicit, but default
 fi
 
