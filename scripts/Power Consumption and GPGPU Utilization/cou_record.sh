@@ -2,6 +2,8 @@
 # Continuously logs DRAM usage, per-process CPU utilisation,
 # and package-level power (Intel RAPL) to cpu.log every second.
 
+# Read energy consumption from Intel RAPL (Running Average Power Limit) interfaces
+# for both CPU sockets (CPU0 and CPU1) and calculate total initial energy value
 CPU0_ENERGY=$(cat /sys/class/powercap/intel-rapl:0/energy_uj)
 CPU1_ENERGY=$(cat /sys/class/powercap/intel-rapl:1/energy_uj)
 LAST_ENERGY_VALUE=$((CPU0_ENERGY + CPU1_ENERGY))
