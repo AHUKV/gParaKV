@@ -2,4 +2,4 @@
 
 **Sysstat provides system performance monitoring tools including iostat, mpstat, pidstat, and sar**
 
-**sudo apt-get install sysstat**
+```sudo apt-get install sysstat```
