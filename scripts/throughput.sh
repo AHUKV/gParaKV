@@ -36,10 +36,8 @@ ENABLE_GC=${ENABLE_GC:-0}            # 0 = no GC, 1 = trigger GC
 #############################
 if [[ "$ENABLE_GC" -eq 1 ]]; then
   DB_BENCH_BIN="$HOME/gParaKV-GC/build/db_bench"
-  GC_FLAG="--gc=1"      # Explicitly enable GC (default is 0)
 else
   DB_BENCH_BIN="$HOME/gParaKV/build/db_bench"
-  GC_FLAG="--gc=0"
 fi
 
 #############################
@@ -56,7 +54,6 @@ echo "≈${TOTAL_GIB} GiB of data will be written." | tee /dev/tty
   --value_size="$VALUE_SIZE" \
   --num="$NUM_KV" \
   --db="$DB_PATH" \
-  $GC_FLAG \
   &> "$OUT_FILE"
 
 echo "Benchmark finished. Results saved to $OUT_FILE"
